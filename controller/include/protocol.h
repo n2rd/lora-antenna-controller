@@ -12,8 +12,8 @@
  * - Position format: AP1###\r where ### is azimuth 000-359
  * - PTT command format: V (single character)
  *
- * @author Your Name
- * @date 2024
+ * @author Rajiv Dewan, N2RD
+ * @date 2026
  */
 
 #ifndef PROTOCOL_H
@@ -102,5 +102,41 @@ struct PhaserReply {
     float mcu_voltage;     /**< MCU supply voltage (V) */
     float rev_power;       /**< Reverse power (W) */
 };
+
+// ============================================================================
+// SECURITY & AUTHENTICATION
+// ============================================================================
+
+/** 
+ * @brief Shared authentication key for command validation
+ * 
+ * IMPORTANT: Change this to a unique value for your system.
+ * Both controller and phaser must use identical keys.
+ * Keep this secret to prevent unauthorized LoRa commands.
+ */
+#define AUTH_KEY "N2RD-ANTENNA-KEY"
+
+/** @brief Length of authentication hash appended to commands (bytes) */
+#define AUTH_LEN 2
+
+/**
+ * @brief Compute authentication hash for command
+ * 
+ * Simple hash-based authentication to prevent unauthorized commands.
+ * Uses a basic mixing algorithm for minimal resource usage.
+ *
+ * @param data Command data buffer
+ * @param len Length of command data (excluding auth bytes)
+ * @return 16-bit authentication hash
+ */
+static inline uint16_t compute_auth(const uint8_t* data, uint8_t len) {
+    uint16_t hash = 0xB33F;  // Start value
+    for (uint8_t i = 0; i < len; i++) {
+        // Simple mixing: rotate left by 5, XOR with key byte, add data
+        hash = ((hash << 5) | (hash >> 11)) ^ ((uint8_t)AUTH_KEY[i % (sizeof(AUTH_KEY)-1)]);
+        hash += data[i];
+    }
+    return hash;
+}
 
 #endif // PROTOCOL_H

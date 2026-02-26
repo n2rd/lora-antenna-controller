@@ -23,8 +23,8 @@
  * - Adafruit INA3221 Breakout
  * - 12-bit ADC for SWR measurement
  *
- * @author Your Name
- * @date 2024
+ * @author Rajiv Dewan, N2RD
+ * @date 2026
  */
 
 // ============================================================================
@@ -530,8 +530,59 @@ void loop() {
                 return;
             }
             
-            // Convert buffer to command
-            command_length = len;
+            // ================================================================
+            // AUTHENTICATION CHECK
+            // ================================================================
+            // Commands should be: [actual_command] + [auth_hi][auth_lo]
+            if (len < 3) {  // Minimum: 1 byte command + 2 auth bytes
+                Serial.printf("ERROR: Packet too short (%d bytes), rejecting\n", len);
+                return;
+            }
+            
+            uint8_t cmd_len = len - AUTH_LEN;  // Actual command length (without auth)
+            uint16_t received_auth = ((uint16_t)command_buffer[cmd_len] << 8) | 
+                                     command_buffer[cmd_len + 1];
+            uint16_t computed_auth = compute_auth((uint8_t*)command_buffer, cmd_len);
+            
+            if (received_auth != computed_auth) {
+                Serial.printf("ERROR: Authentication failed! Received [%04X] but expected [%04X]\n",
+                             received_auth, computed_auth);
+                return;  // Drop packet silently
+            }
+            
+            DEBUG_PRINTF("✓ Authentication valid [%04X]\n", computed_auth);
+            
+            // ================================================================
+            // FORMAT VALIDATION
+            // ================================================================
+            // Validate command format before processing
+            bool valid_format = false;
+            
+            if (cmd_len == 1 && (command_buffer[0] == 'V' || command_buffer[0] == ';')) {
+                valid_format = true;  // Single-char commands: V or ;
+            } else if (cmd_len == 3 && command_buffer[0] == 'A' && 
+                      (command_buffer[1] == 'I' || command_buffer[1] == 'M')) {
+                valid_format = true;  // AI1 or AM1 format
+            } else if (cmd_len == 7 && command_buffer[0] == 'A' && 
+                      command_buffer[1] == 'P' && command_buffer[2] == '1') {
+                // AP1### format - validate angle digits
+                valid_format = (isdigit(command_buffer[3]) && 
+                               isdigit(command_buffer[4]) && 
+                               isdigit(command_buffer[5]));
+            }
+            
+            if (!valid_format) {
+                Serial.printf("ERROR: Invalid command format (len=%d)\n", cmd_len);
+                return;  // Drop packet
+            }
+            
+            DEBUG_PRINTLN("✓ Format validation passed");
+            
+            // ================================================================
+            // COMMAND PROCESSING
+            // ================================================================
+            // Strip auth bytes and process
+            command_length = cmd_len;
             if (command_length > MAX_COMMAND_LEN - 1) {
                 command_length = MAX_COMMAND_LEN - 1;
             }

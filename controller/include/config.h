@@ -8,8 +8,8 @@
  * Hardware: Adafruit Feather M0 with RFM95 LoRa Radio
  * Purpose: Remote antenna azimuth control from the shack
  *
- * @author Your Name
- * @date 2024
+ * @author Rajiv Dewan, N2RD
+ * @date 2026
  */
 
 #ifndef CONFIG_H

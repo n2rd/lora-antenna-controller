@@ -8,8 +8,8 @@
  * - MCP23017 GPIO expander (buttons and LEDs)
  * - User input/output operations
  *
- * @author Your Name
- * @date 2024
+ * @author Rajiv Dewan, N2RD
+ * @date 2026
  */
 
 #ifndef HARDWARE_H

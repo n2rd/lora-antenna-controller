@@ -8,12 +8,14 @@
  * Hardware: Adafruit Feather M0 with RFM95 LoRa Radio
  * Purpose: Remote antenna rotation control and telemetry
  *
- * @author Your Name
- * @date 2024
+ * @author Rajiv Dewan, N2RD
+ * @date 2026
  */
 
 #ifndef CONFIG_H
 #define CONFIG_H
+
+#include <cstdint>  // For uint8_t type
 
 // ============================================================================
 // RADIO CONFIGURATION
@@ -124,16 +126,17 @@ static const char* DIRECTION_ANGLES[] = {
  * @brief Relay configuration for RemoteQTH 8-direction controller
  *
  * Each row represents relay states {R1, R2, R3, R4, R5/6, R7/8} for that direction
+ * 0 = LOW (relay off), 1 = HIGH (relay on)
  */
-static const boolean RELAY_POSITIONS[8][6] = {
-    {LOW,  LOW,  LOW,  LOW,  LOW,  LOW},  // N (000°): 0
-    {LOW,  LOW,  HIGH, HIGH, LOW,  HIGH}, // NE (045°): 1
-    {HIGH, HIGH, HIGH, HIGH, HIGH, HIGH}, // E (090°): 2
-    {LOW,  HIGH, HIGH, LOW,  LOW,  HIGH}, // SE (135°): 3
-    {LOW,  LOW,  LOW,  LOW,  HIGH, HIGH}, // S (180°): 4
-    {HIGH, HIGH, LOW,  LOW,  LOW,  HIGH}, // SW (225°): 5
-    {HIGH, HIGH, HIGH, HIGH, LOW,  LOW},  // W (270°): 6
-    {HIGH, LOW,  LOW,  HIGH, LOW,  LOW}   // NW (315°): 7
+static const uint8_t RELAY_POSITIONS[8][6] = {
+    {0, 0, 0, 0, 0, 0},  // N (000°): 0
+    {0, 0, 1, 1, 0, 1},  // NE (045°): 1
+    {1, 1, 1, 1, 1, 1},  // E (090°): 2
+    {0, 1, 1, 0, 0, 1},  // SE (135°): 3
+    {0, 0, 0, 0, 1, 1},  // S (180°): 4
+    {1, 1, 0, 0, 0, 1},  // SW (225°): 5
+    {1, 1, 1, 1, 0, 0},  // W (270°): 6
+    {1, 0, 0, 1, 0, 0}   // NW (315°): 7
 };
 
 #elif ANTENNA_CONFIG == ANTENNA_COMTEK
@@ -142,22 +145,23 @@ static const boolean RELAY_POSITIONS[8][6] = {
  * @brief Relay configuration for Comtek 4-direction controller
  *
  * Comtek only supports 4 directions using 2 relays:
- * - NE/N: Relays off/off
- * - SE/E: Relay 1 on
- * - SW/S: Relay 2 on  
- * - NW/W: Both relays on
+ * - N/NE: Relays off/off
+ * - E/SE: Relay 1 on
+ * - S/SW: Relay 2 on  
+ * - W/NW: Both relays on
  *
- * NE and E are combined, S and W are combined.
+ * The 8-element array accommodates the full direction range,
+ * but indices are mapped: 0/1=N, 2/3=E, 4/5=S, 6/7=W
  */
-static const boolean RELAY_POSITIONS[8][6] = {
-    {LOW,  LOW,  LOW,  LOW,  LOW,  LOW},  // N (000°): Maps to NE pattern
-    {LOW,  LOW,  LOW,  LOW,  LOW,  LOW},  // NE (045°): 0
-    {HIGH, LOW,  LOW,  LOW,  LOW,  LOW},  // E (090°): Maps to SE pattern
-    {HIGH, LOW,  LOW,  LOW,  LOW,  LOW},  // SE (135°): 1
-    {LOW,  HIGH, LOW,  LOW,  LOW,  LOW},  // S (180°): Maps to SW pattern
-    {LOW,  HIGH, LOW,  LOW,  LOW,  LOW},  // SW (225°): 2
-    {HIGH, HIGH, LOW,  LOW,  LOW,  LOW},  // W (270°): Maps to NW pattern
-    {HIGH, HIGH, LOW,  LOW,  LOW,  LOW}   // NW (315°): 3
+static const uint8_t RELAY_POSITIONS[8][6] = {
+    {0, 0, 0, 0, 0, 0},  // N (000°): Maps to NE pattern
+    {0, 0, 0, 0, 0, 0},  // NE (045°): 0
+    {1, 0, 0, 0, 0, 0},  // E (090°): Maps to SE pattern
+    {1, 0, 0, 0, 0, 0},  // SE (135°): 1
+    {0, 1, 0, 0, 0, 0},  // S (180°): Maps to SW pattern
+    {0, 1, 0, 0, 0, 0},  // SW (225°): 2
+    {1, 1, 0, 0, 0, 0},  // W (270°): Maps to NW pattern
+    {1, 1, 0, 0, 0, 0}   // NW (315°): 3
 };
 
 #else

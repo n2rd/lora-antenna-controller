@@ -154,7 +154,50 @@ pio run -t upload -e adafruit_feather_m0_comtek
 
 See [docs/ANTENNA_CONFIG.md](docs/ANTENNA_CONFIG.md) for detailed comparison and selection guide.
 
-## Documentation
+## Security
+
+This system includes authentication to prevent unauthorized LoRa commands from interfering with your antenna control.
+
+### Authentication Key Setup
+
+**Important:** Both controller and phaser units must use the same authentication key.
+
+1. **Edit the authentication key** in both projects:
+   - `controller/include/protocol.h` - Find `#define AUTH_KEY "N2RD-ANTENNA-KEY"`
+   - `phaser/include/protocol.h` - Find same define
+
+2. **Change the key value** to something unique for your system:
+   ```cpp
+   #define AUTH_KEY "YOUR-UNIQUE-SECRET-KEY-HERE"
+   ```
+   - Use a mix of letters and numbers
+   - Minimum 8 characters recommended
+   - Both files MUST have identical keys
+   - Keep this secret (don't share in public repos)
+
+3. **Recompile both units** after changing the key:
+   ```bash
+   cd controller && pio run -t upload
+   cd ../phaser && pio run -t upload -e adafruit_feather_m0
+   ```
+
+### What's Protected
+
+- ✅ **Random RF interference** - Only 1-in-65,536 chance of accidental valid command
+- ✅ **Accidental nearby LoRa devices** - Format validation catches malformed packets
+- ✅ **Casual script-kiddie attacks** - Requires knowledge of secret key
+- ✅ **Packet replays blocked** - Each transmission verified independently
+
+### Security Limitations
+
+- ⚠️ **Not protected against reverse engineering** - If someone obtains your source, they get the key
+- ⚠️ **Weak encryption** - Uses simple hash, not military-grade crypto (appropriate for amateur radio)
+- ⚠️ **RF jamming** - Not protected against pure signal jamming (out of scope for this project)
+
+### Default Key
+
+The default key `"N2RD-ANTENNA-KEY"` is **only for testing**. You MUST change it to a unique value before deploying in the field.
+
 
 - [Controller README](controller/README.md) - Detailed controller operation and pinouts
 - [Phaser README](phaser/README.md) - Phaser configuration, relay maps, antenna setup

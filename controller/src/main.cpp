@@ -18,8 +18,8 @@
  * - SH1106 1.3" OLED Display
  * - MCP23017 I2C GPIO Expander
  *
- * @author Your Name
- * @date 2024
+ * @author Rajiv Dewan, N2RD
+ * @date 2026
  */
 
 // ============================================================================
@@ -93,6 +93,8 @@ void display_telemetry(const uint8_t* buf, uint8_t len);
 void handle_button_press(int button);
 void handle_ptt_press(void);
 void handle_serial_input(void);
+void display_message(const char* message);
+bool debounce_pin(int pin, int target_level);
 
 // ============================================================================
 // INITIALIZATION
@@ -221,68 +223,179 @@ void build_ptt_command(Command& cmd) {
     cmd.length = 1;
     DEBUG_PRINTLN("Built PTT (telemetry) command");
 }
-  // write all details to OLED screen
-  //first refresh the screen and REV PWR display
-  display.clearDisplay();  //clear the screen first
-  display.display();
+
+/**
+ * @brief Send command and process reply from phaser
+ *
+ * Transmits command via LoRa and waits for response.
+ * Handles TimeoutsAutomatic retries via RadioHead.
+ *
+ * @param cmd Command structure to send
+ */
+void send_and_process_command(const Command& cmd) {
+    // Send command via RadioHead reliable datagram with authentication
+    uint8_t reply_buf[RH_RF95_MAX_MESSAGE_LEN];
+    uint8_t reply_len = sizeof(reply_buf);
+    uint8_t from_addr;
+    
+    // Build authenticated packet: [command data] + [auth_hi][auth_lo]
+    uint8_t auth_packet[cmd.length + AUTH_LEN];
+    memcpy(auth_packet, cmd.data, cmd.length);
+    
+    // Compute and append authentication hash
+    uint16_t auth = compute_auth(cmd.data, cmd.length);
+    auth_packet[cmd.length] = (auth >> 8) & 0xFF;      // High byte
+    auth_packet[cmd.length + 1] = auth & 0xFF;         // Low byte
+    
+    Serial.printf("→ Sending %d byte command (auth: %04X): ", cmd.length + AUTH_LEN, auth);
+    for (int i = 0; i < cmd.length; i++) {
+        Serial.write(cmd.data[i]);
+    }
+    Serial.printf(" [%02X %02X]\n", auth_packet[cmd.length], auth_packet[cmd.length + 1]);
+    
+    // Send authenticated packet to phaser unit
+    if (rf95_manager.sendtoWait(auth_packet, cmd.length + AUTH_LEN, DEST_ADDRESS)) {
+        // Wait for reply
+        if (rf95_manager.recvfromAck(reply_buf, &reply_len, &from_addr)) {
+            Serial.printf("← Received %d byte reply from [%d]\n", reply_len, from_addr);
+            process_reply(reply_buf, reply_len);
+        } else {
+            Serial.println("ERROR: No reply from phaser (timeout)");
+            display_message("TIMEOUT");
+        }
+    } else {
+        Serial.println("ERROR: Failed to send command to phaser");
+        display_message("TX FAIL");
+    }
+}
+
+/**
+ * @brief Parse and process reply from phaser
+ *
+ * Handles different reply types:
+ * - Position replies (';' prefix)
+ * - Power/SWR replies ('V' prefix)
+ *
+ * @param buf Reply buffer
+ * @param len Reply length
+ */
+void process_reply(const uint8_t* buf, uint8_t len) {
+    if (len == 0) return;
+    
+    // Check reply type
+    if (buf[0] == ';') {
+        // Position reply format: ;D<data>...
+        // Update current direction
+        if (len >= 2) {
+            int direction = buf[1] - '0';
+            if (direction >= 0 && direction < NUM_DIRECTIONS) {
+                current_direction = direction;
+                Serial.printf("Direction: %s\n", DIRECTION_NAMES[direction]);
+            }
+        }
+        // Store full reply and display telemetry
+        memcpy(last_reply_buffer, buf, len);
+        last_reply_length = len;
+        display_telemetry(buf, len);
+        
+    } else if (buf[0] == 'V') {
+        // Power/SWR reply format: VPPPPPP
+        // Extract reverse power reading
+        if (len >= 7) {
+            for (int i = 0; i < 6; i++) {
+                last_rev_power[i] = buf[i + 1];
+            }
+            last_rev_power[6] = '\0';
+            Serial.printf("Reverse Power: %s\n", last_rev_power);
+        }
+        // Display power data
+        display_telemetry(buf, len);
+    }
+}
+
+/**
+ * @brief Parse direction from reply
+ *
+ * Extracts direction number from phaser reply.
+ *
+ * @param buf Reply buffer
+ * @return Direction (0-7) or current_direction if parse error
+ */
+Direction parse_direction_from_reply(const uint8_t* buf) {
+    if (buf[0] == ';' && buf[1] >= '0' && buf[1] <= '7') {
+        return (Direction)(buf[1] - '0');
+    }
+    return (Direction)current_direction;
+}
+
+/**
+ * @brief Display telemetry data on OLED screen
+ *
+ * Shows antenna position, voltage, current, signal strength, and power data.
+ *
+ * @param buf Reply buffer from phaser
+ * @param len Length of reply data
+ */
+void display_telemetry(const uint8_t* buf, uint8_t len) {
+  // Clear screen and display reverse power
+  display.clearDisplay();
   display.setTextSize(2);
   display.setTextColor(SH110X_WHITE);
   display.setCursor(0, 0);
   display.print("Rev ");
-  for (int i=0;i<6;i++) display.print(rev_pwr[i]);
+  for (int i = 0; i < 6; i++) display.print(last_rev_power[i]);
   display.println();
-  // now write the transmit and receive rssi
-  display.setCursor(0, 20);
+  
+  // Show RSSI (transmit and receive)
   display.setTextSize(1);
+  display.setCursor(0, 20);
   display.print("RSSI T/R: ");
-  display.printf("%+04d",rf95.lastRssi());
-  display.print("/");
-  display.print("-");
-  for (int i=6;i<9;i++){  //the position
-    display.print((char)buf[i]);
+  display.printf("%+04d", rf95.lastRssi());
+  display.print("/-");
+  
+  // Show receive RSSI from phaser reply
+  if (len >= 9) {
+    for (int i = 6; i < 9; i++) {
+      display.print((char)buf[i]);
+    }
   }
-  //now for the voltage and current
+  
+  // Show bus voltage
   display.setCursor(0, 30);
   display.print("Bus V: ");
-  display.print((char)buf[10]);
-  display.print((char)buf[11]);
-  display.print(".");
-  for (int i=12;i<15;i++){  //the position
-    display.print((char)buf[i]);
+  if (len >= 15) {
+    display.print((char)buf[10]);
+    display.print((char)buf[11]);
+    display.print(".");
+    for (int i = 12; i < 15; i++) {
+      display.print((char)buf[i]);
+    }
   }
+  
+  // Show bus current
   display.setCursor(0, 40);
   display.print("Bus mA: ");
-  for (int i=16;i<19;i++){  //the position
-    display.print((char)buf[i]);
+  if (len >= 19) {
+    for (int i = 16; i < 19; i++) {
+      display.print((char)buf[i]);
+    }
   }
+  
+  // Show MCU voltage
   display.setCursor(0, 50);
   display.print("MCU V: ");
-  display.print((char)buf[20]);
-  display.print(".");
-  for (int i=21;i<24;i++){  //the position
-    display.print((char)buf[i]);
-  }
-  //also print the position
-    display.println("");
-  }
-  
-  // Show RSSI
-  display.setTextSize(1);
-  display.print("RSSI: ");
-  display.printf("%+d", rf95.lastRssi());
-  display.println(" dBm");
-  
-  // Show current direction
-  if (buf[0] == REPLY_POSITION && len >= 4) {
-    display.print("Pos: ");
-    display.print((char)buf[1]);
-    display.print((char)buf[2]);
-    display.println((char)buf[3]);
+  if (len >= 24) {
+    display.print((char)buf[20]);
+    display.print(".");
+    for (int i = 21; i < 24; i++) {
+      display.print((char)buf[i]);
+    }
   }
   
-  // Show antenna name
-  display.printf("Dir: %s", DIRECTION_NAMES[current_direction]);
+  // Show antenna name / position
+  display.printf("\nDir: %s", DIRECTION_NAMES[current_direction]);
   
+  // Update display
   display.display();
 }
 
