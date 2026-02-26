@@ -1,0 +1,124 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# PlatformIO
+.pio
+.pioenvs
+.piolibdeps
+.pio/
+.pioenvs/
+.piolibdeps/
+.platformio/
+dist/
+
+# Build outputs
+build/
+dist/
+*.o
+*.a
+*.lib
+*.exe
+*.elf
+*.out
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.AppleDouble
+.LSOverride
+*.sublime-project
+*.sublime-workspace
+
+# VS Code specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Config files (but keep examples)
+.env
+.env.local
+*.secret
+secrets.txt
+
+# Serial monitor logs
+*.log
+*.bak
+
+# Compiler/Linker
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.elf
+*.hex
+*.bin
+*.uf2
+
+# CMake (if used)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Arduino/PlatformIO libraries cache
+.lib/
+.piolibdeps/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+.windows-build-tools
+
+# Documentation builds
+docs/_build/
+site/
+
+# Hardware EDA
+*.kicad_pcb-bak
+*.sch-bak
+*.pro-bak
+
+# Miscellaneous
+.gdb_history
+.code-workspace
