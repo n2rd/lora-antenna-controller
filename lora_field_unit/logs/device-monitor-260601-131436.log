@@ -1,0 +1,873 @@
+13:14:36.948 > ESP-ROM:esp32s3-20210327
+13:14:36.948 > Build:Mar 27 2021
+13:14:36.949 > rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+13:14:36.950 > Saved PC:0x4202c4da
+13:14:36.951 > SPIWP:0xee
+13:14:36.952 > mode:DIO, clock div:1
+13:14:36.953 > load:0x3fce3808,len:0x4bc
+13:14:36.955 > load:0x403c9700,len:0xbd8
+13:14:36.958 > load:0x403cc700,len:0x2a0c
+13:14:36.965 > entry 0x403c98d0
+13:14:37.557 > 
+13:14:37.557 > 
+13:14:37.557 > ========== LoRa Antenna Phaser (Heltec V3) Starting ==========
+13:14:37.557 >   CPU: 240 MHz, Free heap: 371040 bytes
+13:14:37.557 > [INIT] Enabling Vext peripheral power...
+13:14:37.757 > [INIT] Vext enabled.
+13:14:37.757 > Antenna direction set to 1 (045 deg)
+13:14:37.757 > [INIT] Relay outputs configured.
+13:14:37.757 > [INIT] ADC 12-bit resolution set.
+13:14:37.758 > [INIT] Starting LoRa radio (CS=8, INT=14, RST=12, BUSY=13)...
+13:14:37.802 > [INIT] Radio OK: 915.0 MHz, SF9, BW125, CR4/7, TX 20 dBm
+13:14:37.803 > [INIT] INA219 OK.
+13:14:37.804 > Bus: 756 mV, 0 mA
+13:14:37.805 > [INIT] ========== All systems ready ==========
+13:14:37.805 > 
+13:14:49.320 > Packet #1 [RSSI:-109 dBm]: 41 50 31 30 30 30 0D 
+13:14:49.320 > Processing command (7 bytes): AP1000
+13:14:49.320 > Setting direction to 0 (000 deg)
+13:14:49.320 > Antenna direction set to 0 (000 deg)
+13:14:49.322 > Bus: 756 mV, 3 mA
+13:14:49.322 > Position reply length: 19
+13:14:49.555 > Reply sent (19 bytes)
+13:14:49.572 > Packet #2 [RSSI:-109 dBm]: 3B 30 30 30 72 2D 31 
+13:14:49.572 > Processing command (7 bytes): ;000r-1
+13:14:49.572 > Malformed 7-byte command
+13:14:49.572 > No reply to send.
+13:14:56.613 > Packet #3 [RSSI:-114 dBm]: 56 
+13:14:56.613 > Processing command (1 bytes): V
+13:14:56.613 > Power report request received
+13:14:56.615 > Bus: 120 mV, 0 mA
+13:14:56.715 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:56.716 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:14:56.863 > Reply sent (7 bytes)
+13:14:56.880 > Packet #4 [RSSI:-114 dBm]: 56 
+13:14:56.880 > Processing command (1 bytes): V
+13:14:56.880 > Power report request received
+13:14:56.881 > Bus: 124 mV, 0 mA
+13:14:56.982 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:56.983 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:14:57.130 > Reply sent (7 bytes)
+13:14:57.147 > Packet #5 [RSSI:-114 dBm]: 56 
+13:14:57.147 > Processing command (1 bytes): V
+13:14:57.147 > Power report request received
+13:14:57.148 > Bus: 124 mV, 0 mA
+13:14:57.249 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:57.250 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:14:57.397 > Reply sent (7 bytes)
+13:14:57.414 > Packet #6 [RSSI:-114 dBm]: 56 
+13:14:57.414 > Processing command (1 bytes): V
+13:14:57.414 > Power report request received
+13:14:57.415 > Bus: 120 mV, 0 mA
+13:14:57.516 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:57.517 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:14:57.664 > Reply sent (7 bytes)
+13:14:57.681 > Packet #7 [RSSI:-114 dBm]: 56 
+13:14:57.681 > Processing command (1 bytes): V
+13:14:57.681 > Power report request received
+13:14:57.682 > Bus: 120 mV, 0 mA
+13:14:57.783 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:57.784 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:14:57.931 > Reply sent (7 bytes)
+13:14:57.948 > Packet #8 [RSSI:-114 dBm]: 56 
+13:14:57.948 > Processing command (1 bytes): V
+13:14:57.948 > Power report request received
+13:14:57.949 > Bus: 124 mV, 0 mA
+13:14:58.050 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:58.051 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:14:58.198 > Reply sent (7 bytes)
+13:14:58.215 > Packet #9 [RSSI:-114 dBm]: 56 
+13:14:58.215 > Processing command (1 bytes): V
+13:14:58.215 > Power report request received
+13:14:58.216 > Bus: 124 mV, 0 mA
+13:14:58.317 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:58.318 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:14:58.465 > Reply sent (7 bytes)
+13:14:58.482 > Packet #10 [RSSI:-114 dBm]: 56 
+13:14:58.482 > Processing command (1 bytes): V
+13:14:58.482 > Power report request received
+13:14:58.483 > Bus: 124 mV, 0 mA
+13:14:58.584 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:58.585 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:14:58.732 > Reply sent (7 bytes)
+13:14:58.749 > Packet #11 [RSSI:-114 dBm]: 56 
+13:14:58.749 > Processing command (1 bytes): V
+13:14:58.749 > Power report request received
+13:14:58.750 > Bus: 124 mV, 0 mA
+13:14:58.851 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:58.852 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:14:58.999 > Reply sent (7 bytes)
+13:14:59.016 > Packet #12 [RSSI:-114 dBm]: 56 
+13:14:59.016 > Processing command (1 bytes): V
+13:14:59.016 > Power report request received
+13:14:59.017 > Bus: 124 mV, 0 mA
+13:14:59.118 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:59.119 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:14:59.266 > Reply sent (7 bytes)
+13:14:59.283 > Packet #13 [RSSI:-114 dBm]: 56 
+13:14:59.283 > Processing command (1 bytes): V
+13:14:59.283 > Power report request received
+13:14:59.284 > Bus: 124 mV, 0 mA
+13:14:59.385 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:59.386 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:14:59.533 > Reply sent (7 bytes)
+13:14:59.550 > Packet #14 [RSSI:-114 dBm]: 56 
+13:14:59.550 > Processing command (1 bytes): V
+13:14:59.550 > Power report request received
+13:14:59.551 > Bus: 128 mV, 0 mA
+13:14:59.652 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:59.653 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:14:59.800 > Reply sent (7 bytes)
+13:14:59.817 > Packet #15 [RSSI:-114 dBm]: 56 
+13:14:59.817 > Processing command (1 bytes): V
+13:14:59.817 > Power report request received
+13:14:59.818 > Bus: 124 mV, 0 mA
+13:14:59.919 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:14:59.920 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:00.067 > Reply sent (7 bytes)
+13:15:00.084 > Packet #16 [RSSI:-114 dBm]: 56 
+13:15:00.084 > Processing command (1 bytes): V
+13:15:00.084 > Power report request received
+13:15:00.085 > Bus: 124 mV, 0 mA
+13:15:00.186 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:00.187 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:00.334 > Reply sent (7 bytes)
+13:15:00.351 > Packet #17 [RSSI:-114 dBm]: 56 
+13:15:00.351 > Processing command (1 bytes): V
+13:15:00.351 > Power report request received
+13:15:00.352 > Bus: 124 mV, 0 mA
+13:15:00.453 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:00.453 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:00.601 > Reply sent (7 bytes)
+13:15:00.618 > Packet #18 [RSSI:-114 dBm]: 56 
+13:15:00.618 > Processing command (1 bytes): V
+13:15:00.618 > Power report request received
+13:15:00.619 > Bus: 124 mV, 0 mA
+13:15:00.720 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:00.721 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:00.868 > Reply sent (7 bytes)
+13:15:00.885 > Packet #19 [RSSI:-114 dBm]: 56 
+13:15:00.885 > Processing command (1 bytes): V
+13:15:00.885 > Power report request received
+13:15:00.886 > Bus: 124 mV, 0 mA
+13:15:00.987 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:00.988 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:01.135 > Reply sent (7 bytes)
+13:15:01.152 > Packet #20 [RSSI:-114 dBm]: 56 
+13:15:01.152 > Processing command (1 bytes): V
+13:15:01.152 > Power report request received
+13:15:01.153 > Bus: 124 mV, 0 mA
+13:15:01.254 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:01.255 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:01.402 > Reply sent (7 bytes)
+13:15:01.419 > Packet #21 [RSSI:-114 dBm]: 56 
+13:15:01.419 > Processing command (1 bytes): V
+13:15:01.419 > Power report request received
+13:15:01.420 > Bus: 120 mV, 0 mA
+13:15:01.521 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:01.521 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:01.669 > Reply sent (7 bytes)
+13:15:01.686 > Packet #22 [RSSI:-114 dBm]: 56 
+13:15:01.686 > Processing command (1 bytes): V
+13:15:01.686 > Power report request received
+13:15:01.687 > Bus: 124 mV, 0 mA
+13:15:01.788 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:01.789 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:01.936 > Reply sent (7 bytes)
+13:15:01.953 > Packet #23 [RSSI:-114 dBm]: 56 
+13:15:01.953 > Processing command (1 bytes): V
+13:15:01.953 > Power report request received
+13:15:01.954 > Bus: 124 mV, 0 mA
+13:15:02.055 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:02.055 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:02.203 > Reply sent (7 bytes)
+13:15:02.220 > Packet #24 [RSSI:-114 dBm]: 56 
+13:15:02.220 > Processing command (1 bytes): V
+13:15:02.220 > Power report request received
+13:15:02.221 > Bus: 124 mV, 0 mA
+13:15:02.322 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:02.323 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:02.470 > Reply sent (7 bytes)
+13:15:02.487 > Packet #25 [RSSI:-114 dBm]: 56 
+13:15:02.487 > Processing command (1 bytes): V
+13:15:02.487 > Power report request received
+13:15:02.488 > Bus: 120 mV, 0 mA
+13:15:02.589 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:02.590 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:02.737 > Reply sent (7 bytes)
+13:15:02.754 > Packet #26 [RSSI:-114 dBm]: 56 
+13:15:02.754 > Processing command (1 bytes): V
+13:15:02.754 > Power report request received
+13:15:02.755 > Bus: 124 mV, 0 mA
+13:15:02.856 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:02.857 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:03.004 > Reply sent (7 bytes)
+13:15:03.021 > Packet #27 [RSSI:-114 dBm]: 56 
+13:15:03.021 > Processing command (1 bytes): V
+13:15:03.021 > Power report request received
+13:15:03.022 > Bus: 124 mV, 0 mA
+13:15:03.123 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:03.124 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:03.271 > Reply sent (7 bytes)
+13:15:03.288 > Packet #28 [RSSI:-114 dBm]: 56 
+13:15:03.288 > Processing command (1 bytes): V
+13:15:03.288 > Power report request received
+13:15:03.289 > Bus: 124 mV, 0 mA
+13:15:03.390 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:03.391 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:03.538 > Reply sent (7 bytes)
+13:15:03.555 > Packet #29 [RSSI:-114 dBm]: 56 
+13:15:03.555 > Processing command (1 bytes): V
+13:15:03.555 > Power report request received
+13:15:03.556 > Bus: 120 mV, 0 mA
+13:15:03.657 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:03.657 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:03.805 > Reply sent (7 bytes)
+13:15:03.822 > Packet #30 [RSSI:-114 dBm]: 56 
+13:15:03.822 > Processing command (1 bytes): V
+13:15:03.822 > Power report request received
+13:15:03.823 > Bus: 124 mV, 0 mA
+13:15:03.924 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:03.925 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:04.072 > Reply sent (7 bytes)
+13:15:04.089 > Packet #31 [RSSI:-114 dBm]: 56 
+13:15:04.089 > Processing command (1 bytes): V
+13:15:04.089 > Power report request received
+13:15:04.090 > Bus: 124 mV, 0 mA
+13:15:04.191 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:04.192 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:04.339 > Reply sent (7 bytes)
+13:15:04.356 > Packet #32 [RSSI:-114 dBm]: 56 
+13:15:04.356 > Processing command (1 bytes): V
+13:15:04.356 > Power report request received
+13:15:04.357 > Bus: 124 mV, 0 mA
+13:15:04.458 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:04.459 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:04.606 > Reply sent (7 bytes)
+13:15:04.623 > Packet #33 [RSSI:-114 dBm]: 56 
+13:15:04.623 > Processing command (1 bytes): V
+13:15:04.623 > Power report request received
+13:15:04.624 > Bus: 124 mV, 0 mA
+13:15:04.725 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:04.726 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:04.873 > Reply sent (7 bytes)
+13:15:04.890 > Packet #34 [RSSI:-114 dBm]: 56 
+13:15:04.890 > Processing command (1 bytes): V
+13:15:04.890 > Power report request received
+13:15:04.891 > Bus: 124 mV, 0 mA
+13:15:04.992 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:04.993 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:05.140 > Reply sent (7 bytes)
+13:15:05.157 > Packet #35 [RSSI:-114 dBm]: 56 
+13:15:05.157 > Processing command (1 bytes): V
+13:15:05.157 > Power report request received
+13:15:05.158 > Bus: 124 mV, 0 mA
+13:15:05.259 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:05.260 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:05.407 > Reply sent (7 bytes)
+13:15:05.424 > Packet #36 [RSSI:-114 dBm]: 56 
+13:15:05.424 > Processing command (1 bytes): V
+13:15:05.424 > Power report request received
+13:15:05.425 > Bus: 120 mV, 0 mA
+13:15:05.526 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:05.527 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:05.674 > Reply sent (7 bytes)
+13:15:05.691 > Packet #37 [RSSI:-114 dBm]: 56 
+13:15:05.691 > Processing command (1 bytes): V
+13:15:05.691 > Power report request received
+13:15:05.692 > Bus: 128 mV, -1 mA
+13:15:05.793 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:05.794 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:05.941 > Reply sent (7 bytes)
+13:15:05.958 > Packet #38 [RSSI:-114 dBm]: 56 
+13:15:05.958 > Processing command (1 bytes): V
+13:15:05.958 > Power report request received
+13:15:05.959 > Bus: 124 mV, -1 mA
+13:15:06.060 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:06.061 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:06.208 > Reply sent (7 bytes)
+13:15:06.225 > Packet #39 [RSSI:-114 dBm]: 56 
+13:15:06.225 > Processing command (1 bytes): V
+13:15:06.225 > Power report request received
+13:15:06.226 > Bus: 124 mV, 0 mA
+13:15:06.327 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:06.328 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:06.475 > Reply sent (7 bytes)
+13:15:06.492 > Packet #40 [RSSI:-114 dBm]: 56 
+13:15:06.492 > Processing command (1 bytes): V
+13:15:06.492 > Power report request received
+13:15:06.493 > Bus: 124 mV, 0 mA
+13:15:06.594 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:06.595 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:06.742 > Reply sent (7 bytes)
+13:15:06.759 > Packet #41 [RSSI:-114 dBm]: 56 
+13:15:06.759 > Processing command (1 bytes): V
+13:15:06.759 > Power report request received
+13:15:06.760 > Bus: 124 mV, 0 mA
+13:15:06.861 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:06.862 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:07.009 > Reply sent (7 bytes)
+13:15:07.026 > Packet #42 [RSSI:-114 dBm]: 56 
+13:15:07.026 > Processing command (1 bytes): V
+13:15:07.026 > Power report request received
+13:15:07.027 > Bus: 124 mV, 0 mA
+13:15:07.128 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:07.129 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:07.276 > Reply sent (7 bytes)
+13:15:07.293 > Packet #43 [RSSI:-114 dBm]: 56 
+13:15:07.293 > Processing command (1 bytes): V
+13:15:07.293 > Power report request received
+13:15:07.294 > Bus: 124 mV, 0 mA
+13:15:07.395 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:07.396 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:07.543 > Reply sent (7 bytes)
+13:15:07.560 > Packet #44 [RSSI:-114 dBm]: 56 
+13:15:07.560 > Processing command (1 bytes): V
+13:15:07.560 > Power report request received
+13:15:07.561 > Bus: 120 mV, 0 mA
+13:15:07.663 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:07.663 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:07.810 > Reply sent (7 bytes)
+13:15:07.827 > Packet #45 [RSSI:-114 dBm]: 56 
+13:15:07.827 > Processing command (1 bytes): V
+13:15:07.827 > Power report request received
+13:15:07.828 > Bus: 124 mV, 0 mA
+13:15:07.929 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:07.930 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:08.077 > Reply sent (7 bytes)
+13:15:08.094 > Packet #46 [RSSI:-114 dBm]: 56 
+13:15:08.094 > Processing command (1 bytes): V
+13:15:08.094 > Power report request received
+13:15:08.095 > Bus: 124 mV, 0 mA
+13:15:08.196 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:08.197 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:08.344 > Reply sent (7 bytes)
+13:15:08.361 > Packet #47 [RSSI:-114 dBm]: 56 
+13:15:08.361 > Processing command (1 bytes): V
+13:15:08.361 > Power report request received
+13:15:08.362 > Bus: 124 mV, 0 mA
+13:15:08.463 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:08.463 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:08.611 > Reply sent (7 bytes)
+13:15:08.628 > Packet #48 [RSSI:-114 dBm]: 56 
+13:15:08.628 > Processing command (1 bytes): V
+13:15:08.628 > Power report request received
+13:15:08.629 > Bus: 124 mV, 0 mA
+13:15:08.730 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:08.731 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:08.878 > Reply sent (7 bytes)
+13:15:08.895 > Packet #49 [RSSI:-114 dBm]: 56 
+13:15:08.895 > Processing command (1 bytes): V
+13:15:08.895 > Power report request received
+13:15:08.896 > Bus: 124 mV, 0 mA
+13:15:08.997 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:08.998 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:09.145 > Reply sent (7 bytes)
+13:15:09.162 > Packet #50 [RSSI:-114 dBm]: 56 
+13:15:09.162 > Processing command (1 bytes): V
+13:15:09.162 > Power report request received
+13:15:09.163 > Bus: 120 mV, 0 mA
+13:15:09.264 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:09.265 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:09.412 > Reply sent (7 bytes)
+13:15:09.429 > Packet #51 [RSSI:-114 dBm]: 56 
+13:15:09.429 > Processing command (1 bytes): V
+13:15:09.429 > Power report request received
+13:15:09.430 > Bus: 120 mV, 0 mA
+13:15:09.531 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:09.531 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:09.679 > Reply sent (7 bytes)
+13:15:09.696 > Packet #52 [RSSI:-114 dBm]: 56 
+13:15:09.696 > Processing command (1 bytes): V
+13:15:09.696 > Power report request received
+13:15:09.697 > Bus: 120 mV, -1 mA
+13:15:09.798 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:09.799 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:09.946 > Reply sent (7 bytes)
+13:15:09.963 > Packet #53 [RSSI:-114 dBm]: 56 
+13:15:09.963 > Processing command (1 bytes): V
+13:15:09.963 > Power report request received
+13:15:09.964 > Bus: 124 mV, 0 mA
+13:15:10.065 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:10.066 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:10.213 > Reply sent (7 bytes)
+13:15:10.230 > Packet #54 [RSSI:-114 dBm]: 56 
+13:15:10.230 > Processing command (1 bytes): V
+13:15:10.230 > Power report request received
+13:15:10.231 > Bus: 120 mV, 0 mA
+13:15:10.332 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:10.333 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:10.480 > Reply sent (7 bytes)
+13:15:10.497 > Packet #55 [RSSI:-114 dBm]: 56 
+13:15:10.497 > Processing command (1 bytes): V
+13:15:10.497 > Power report request received
+13:15:10.498 > Bus: 124 mV, 0 mA
+13:15:10.599 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:10.599 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:10.747 > Reply sent (7 bytes)
+13:15:10.764 > Packet #56 [RSSI:-114 dBm]: 56 
+13:15:10.764 > Processing command (1 bytes): V
+13:15:10.764 > Power report request received
+13:15:10.765 > Bus: 124 mV, 0 mA
+13:15:10.866 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:10.867 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:11.014 > Reply sent (7 bytes)
+13:15:11.031 > Packet #57 [RSSI:-114 dBm]: 56 
+13:15:11.031 > Processing command (1 bytes): V
+13:15:11.031 > Power report request received
+13:15:11.032 > Bus: 124 mV, 0 mA
+13:15:11.133 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:11.134 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:11.281 > Reply sent (7 bytes)
+13:15:11.298 > Packet #58 [RSSI:-114 dBm]: 56 
+13:15:11.298 > Processing command (1 bytes): V
+13:15:11.298 > Power report request received
+13:15:11.299 > Bus: 124 mV, 0 mA
+13:15:11.400 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:11.401 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:11.548 > Reply sent (7 bytes)
+13:15:11.565 > Packet #59 [RSSI:-114 dBm]: 56 
+13:15:11.565 > Processing command (1 bytes): V
+13:15:11.565 > Power report request received
+13:15:11.566 > Bus: 124 mV, 0 mA
+13:15:11.667 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:11.667 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:11.815 > Reply sent (7 bytes)
+13:15:11.832 > Packet #60 [RSSI:-114 dBm]: 56 
+13:15:11.832 > Processing command (1 bytes): V
+13:15:11.832 > Power report request received
+13:15:11.833 > Bus: 120 mV, -1 mA
+13:15:11.934 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:11.935 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:12.082 > Reply sent (7 bytes)
+13:15:12.099 > Packet #61 [RSSI:-114 dBm]: 56 
+13:15:12.099 > Processing command (1 bytes): V
+13:15:12.099 > Power report request received
+13:15:12.100 > Bus: 124 mV, 0 mA
+13:15:12.201 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:12.202 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:12.349 > Reply sent (7 bytes)
+13:15:12.366 > Packet #62 [RSSI:-114 dBm]: 56 
+13:15:12.366 > Processing command (1 bytes): V
+13:15:12.366 > Power report request received
+13:15:12.367 > Bus: 124 mV, 0 mA
+13:15:12.468 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:12.469 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:12.616 > Reply sent (7 bytes)
+13:15:12.633 > Packet #63 [RSSI:-114 dBm]: 56 
+13:15:12.633 > Processing command (1 bytes): V
+13:15:12.633 > Power report request received
+13:15:12.634 > Bus: 124 mV, 0 mA
+13:15:12.736 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:12.737 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:12.883 > Reply sent (7 bytes)
+13:15:12.900 > Packet #64 [RSSI:-114 dBm]: 56 
+13:15:12.900 > Processing command (1 bytes): V
+13:15:12.900 > Power report request received
+13:15:12.901 > Bus: 124 mV, 0 mA
+13:15:13.002 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:13.003 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:13.150 > Reply sent (7 bytes)
+13:15:13.167 > Packet #65 [RSSI:-114 dBm]: 56 
+13:15:13.168 > Processing command (1 bytes): V
+13:15:13.168 > Power report request received
+13:15:13.168 > Bus: 120 mV, 0 mA
+13:15:13.269 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:13.270 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:13.417 > Reply sent (7 bytes)
+13:15:13.434 > Packet #66 [RSSI:-114 dBm]: 56 
+13:15:13.434 > Processing command (1 bytes): V
+13:15:13.434 > Power report request received
+13:15:13.435 > Bus: 120 mV, 0 mA
+13:15:13.536 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:13.537 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:13.684 > Reply sent (7 bytes)
+13:15:13.701 > Packet #67 [RSSI:-114 dBm]: 56 
+13:15:13.701 > Processing command (1 bytes): V
+13:15:13.701 > Power report request received
+13:15:13.702 > Bus: 124 mV, 0 mA
+13:15:13.803 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:13.804 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:13.951 > Reply sent (7 bytes)
+13:15:13.968 > Packet #68 [RSSI:-114 dBm]: 56 
+13:15:13.968 > Processing command (1 bytes): V
+13:15:13.968 > Power report request received
+13:15:13.969 > Bus: 124 mV, 0 mA
+13:15:14.070 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:14.071 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:14.218 > Reply sent (7 bytes)
+13:15:14.235 > Packet #69 [RSSI:-114 dBm]: 56 
+13:15:14.235 > Processing command (1 bytes): V
+13:15:14.235 > Power report request received
+13:15:14.236 > Bus: 124 mV, 0 mA
+13:15:14.337 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:14.338 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:14.485 > Reply sent (7 bytes)
+13:15:14.502 > Packet #70 [RSSI:-114 dBm]: 56 
+13:15:14.502 > Processing command (1 bytes): V
+13:15:14.502 > Power report request received
+13:15:14.503 > Bus: 124 mV, 0 mA
+13:15:14.604 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:14.605 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:14.752 > Reply sent (7 bytes)
+13:15:14.769 > Packet #71 [RSSI:-114 dBm]: 56 
+13:15:14.769 > Processing command (1 bytes): V
+13:15:14.769 > Power report request received
+13:15:14.770 > Bus: 124 mV, 0 mA
+13:15:14.871 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:14.872 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:15.019 > Reply sent (7 bytes)
+13:15:15.036 > Packet #72 [RSSI:-114 dBm]: 56 
+13:15:15.036 > Processing command (1 bytes): V
+13:15:15.036 > Power report request received
+13:15:15.037 > Bus: 124 mV, 0 mA
+13:15:15.138 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:15.139 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:15.286 > Reply sent (7 bytes)
+13:15:15.303 > Packet #73 [RSSI:-114 dBm]: 56 
+13:15:15.303 > Processing command (1 bytes): V
+13:15:15.303 > Power report request received
+13:15:15.304 > Bus: 128 mV, 0 mA
+13:15:15.405 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:15.405 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:15.553 > Reply sent (7 bytes)
+13:15:15.570 > Packet #74 [RSSI:-114 dBm]: 56 
+13:15:15.570 > Processing command (1 bytes): V
+13:15:15.570 > Power report request received
+13:15:15.571 > Bus: 120 mV, 0 mA
+13:15:15.672 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:15.673 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:15.820 > Reply sent (7 bytes)
+13:15:15.837 > Packet #75 [RSSI:-114 dBm]: 56 
+13:15:15.837 > Processing command (1 bytes): V
+13:15:15.837 > Power report request received
+13:15:15.838 > Bus: 124 mV, 0 mA
+13:15:15.939 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:15.940 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:16.087 > Reply sent (7 bytes)
+13:15:16.104 > Packet #76 [RSSI:-114 dBm]: 56 
+13:15:16.104 > Processing command (1 bytes): V
+13:15:16.104 > Power report request received
+13:15:16.105 > Bus: 124 mV, 0 mA
+13:15:16.206 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:16.207 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:16.354 > Reply sent (7 bytes)
+13:15:16.371 > Packet #77 [RSSI:-114 dBm]: 56 
+13:15:16.371 > Processing command (1 bytes): V
+13:15:16.371 > Power report request received
+13:15:16.372 > Bus: 124 mV, 0 mA
+13:15:16.473 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:16.474 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:16.621 > Reply sent (7 bytes)
+13:15:16.638 > Packet #78 [RSSI:-114 dBm]: 56 
+13:15:16.638 > Processing command (1 bytes): V
+13:15:16.638 > Power report request received
+13:15:16.639 > Bus: 124 mV, 0 mA
+13:15:16.740 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:16.741 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:16.888 > Reply sent (7 bytes)
+13:15:16.905 > Packet #79 [RSSI:-114 dBm]: 56 
+13:15:16.905 > Processing command (1 bytes): V
+13:15:16.905 > Power report request received
+13:15:16.906 > Bus: 124 mV, 0 mA
+13:15:17.007 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:17.008 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:17.155 > Reply sent (7 bytes)
+13:15:17.172 > Packet #80 [RSSI:-114 dBm]: 56 
+13:15:17.172 > Processing command (1 bytes): V
+13:15:17.172 > Power report request received
+13:15:17.173 > Bus: 124 mV, 0 mA
+13:15:17.274 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:17.275 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:17.422 > Reply sent (7 bytes)
+13:15:17.439 > Packet #81 [RSSI:-114 dBm]: 56 
+13:15:17.439 > Processing command (1 bytes): V
+13:15:17.439 > Power report request received
+13:15:17.440 > Bus: 120 mV, 0 mA
+13:15:17.541 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:17.542 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:17.689 > Reply sent (7 bytes)
+13:15:17.706 > Packet #82 [RSSI:-114 dBm]: 56 
+13:15:17.706 > Processing command (1 bytes): V
+13:15:17.706 > Power report request received
+13:15:17.707 > Bus: 128 mV, 0 mA
+13:15:17.808 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:17.809 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:17.956 > Reply sent (7 bytes)
+13:15:17.973 > Packet #83 [RSSI:-114 dBm]: 56 
+13:15:17.973 > Processing command (1 bytes): V
+13:15:17.973 > Power report request received
+13:15:17.974 > Bus: 124 mV, 0 mA
+13:15:18.075 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:18.076 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:18.223 > Reply sent (7 bytes)
+13:15:18.240 > Packet #84 [RSSI:-114 dBm]: 56 
+13:15:18.240 > Processing command (1 bytes): V
+13:15:18.240 > Power report request received
+13:15:18.241 > Bus: 124 mV, 0 mA
+13:15:18.342 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:18.343 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:18.490 > Reply sent (7 bytes)
+13:15:18.507 > Packet #85 [RSSI:-114 dBm]: 56 
+13:15:18.507 > Processing command (1 bytes): V
+13:15:18.507 > Power report request received
+13:15:18.508 > Bus: 120 mV, 0 mA
+13:15:18.609 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:18.609 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:18.757 > Reply sent (7 bytes)
+13:15:18.774 > Packet #86 [RSSI:-114 dBm]: 56 
+13:15:18.774 > Processing command (1 bytes): V
+13:15:18.774 > Power report request received
+13:15:18.775 > Bus: 124 mV, 0 mA
+13:15:18.876 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:18.876 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:19.024 > Reply sent (7 bytes)
+13:15:19.041 > Packet #87 [RSSI:-114 dBm]: 56 
+13:15:19.041 > Processing command (1 bytes): V
+13:15:19.041 > Power report request received
+13:15:19.042 > Bus: 124 mV, 0 mA
+13:15:19.143 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:19.144 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:19.291 > Reply sent (7 bytes)
+13:15:19.308 > Packet #88 [RSSI:-114 dBm]: 56 
+13:15:19.308 > Processing command (1 bytes): V
+13:15:19.308 > Power report request received
+13:15:19.309 > Bus: 124 mV, 0 mA
+13:15:19.410 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:19.411 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:19.558 > Reply sent (7 bytes)
+13:15:19.575 > Packet #89 [RSSI:-114 dBm]: 56 
+13:15:19.575 > Processing command (1 bytes): V
+13:15:19.575 > Power report request received
+13:15:19.576 > Bus: 124 mV, 0 mA
+13:15:19.677 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:19.678 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:19.825 > Reply sent (7 bytes)
+13:15:19.842 > Packet #90 [RSSI:-114 dBm]: 56 
+13:15:19.842 > Processing command (1 bytes): V
+13:15:19.842 > Power report request received
+13:15:19.843 > Bus: 124 mV, 0 mA
+13:15:19.944 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:19.945 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:20.092 > Reply sent (7 bytes)
+13:15:20.109 > Packet #91 [RSSI:-114 dBm]: 56 
+13:15:20.109 > Processing command (1 bytes): V
+13:15:20.109 > Power report request received
+13:15:20.110 > Bus: 120 mV, 0 mA
+13:15:20.211 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:20.212 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:20.359 > Reply sent (7 bytes)
+13:15:20.376 > Packet #92 [RSSI:-114 dBm]: 56 
+13:15:20.376 > Processing command (1 bytes): V
+13:15:20.376 > Power report request received
+13:15:20.377 > Bus: 124 mV, 0 mA
+13:15:20.478 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:20.478 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:20.626 > Reply sent (7 bytes)
+13:15:20.643 > Packet #93 [RSSI:-114 dBm]: 56 
+13:15:20.643 > Processing command (1 bytes): V
+13:15:20.643 > Power report request received
+13:15:20.644 > Bus: 120 mV, 0 mA
+13:15:20.745 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:20.746 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:20.893 > Reply sent (7 bytes)
+13:15:20.910 > Packet #94 [RSSI:-114 dBm]: 56 
+13:15:20.910 > Processing command (1 bytes): V
+13:15:20.910 > Power report request received
+13:15:20.911 > Bus: 124 mV, -1 mA
+13:15:21.013 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:21.013 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:21.160 > Reply sent (7 bytes)
+13:15:21.177 > Packet #95 [RSSI:-114 dBm]: 56 
+13:15:21.177 > Processing command (1 bytes): V
+13:15:21.177 > Power report request received
+13:15:21.178 > Bus: 124 mV, 0 mA
+13:15:21.279 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:21.280 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:21.427 > Reply sent (7 bytes)
+13:15:21.444 > Packet #96 [RSSI:-114 dBm]: 56 
+13:15:21.444 > Processing command (1 bytes): V
+13:15:21.444 > Power report request received
+13:15:21.445 > Bus: 120 mV, 0 mA
+13:15:21.546 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:21.547 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:21.694 > Reply sent (7 bytes)
+13:15:21.711 > Packet #97 [RSSI:-114 dBm]: 56 
+13:15:21.711 > Processing command (1 bytes): V
+13:15:21.711 > Power report request received
+13:15:21.712 > Bus: 124 mV, 0 mA
+13:15:21.813 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:21.814 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:21.961 > Reply sent (7 bytes)
+13:15:21.978 > Packet #98 [RSSI:-114 dBm]: 56 
+13:15:21.978 > Processing command (1 bytes): V
+13:15:21.978 > Power report request received
+13:15:21.979 > Bus: 124 mV, 0 mA
+13:15:22.080 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:22.081 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:22.228 > Reply sent (7 bytes)
+13:15:22.245 > Packet #99 [RSSI:-114 dBm]: 56 
+13:15:22.245 > Processing command (1 bytes): V
+13:15:22.245 > Power report request received
+13:15:22.246 > Bus: 120 mV, 0 mA
+13:15:22.347 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:22.347 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:22.495 > Reply sent (7 bytes)
+13:15:22.512 > Packet #100 [RSSI:-114 dBm]: 56 
+13:15:22.512 > Processing command (1 bytes): V
+13:15:22.512 > Power report request received
+13:15:22.513 > Bus: 124 mV, 0 mA
+13:15:22.614 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:22.615 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:22.762 > Reply sent (7 bytes)
+13:15:22.779 > Packet #101 [RSSI:-114 dBm]: 56 
+13:15:22.779 > Processing command (1 bytes): V
+13:15:22.779 > Power report request received
+13:15:22.780 > Bus: 124 mV, 0 mA
+13:15:22.881 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:22.882 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:23.029 > Reply sent (7 bytes)
+13:15:23.046 > Packet #102 [RSSI:-114 dBm]: 56 
+13:15:23.046 > Processing command (1 bytes): V
+13:15:23.046 > Power report request received
+13:15:23.047 > Bus: 120 mV, 0 mA
+13:15:23.148 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:23.149 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:23.296 > Reply sent (7 bytes)
+13:15:23.313 > Packet #103 [RSSI:-114 dBm]: 56 
+13:15:23.313 > Processing command (1 bytes): V
+13:15:23.313 > Power report request received
+13:15:23.314 > Bus: 124 mV, 0 mA
+13:15:23.415 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:23.416 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:23.563 > Reply sent (7 bytes)
+13:15:23.580 > Packet #104 [RSSI:-114 dBm]: 56 
+13:15:23.580 > Processing command (1 bytes): V
+13:15:23.580 > Power report request received
+13:15:23.581 > Bus: 124 mV, 0 mA
+13:15:23.682 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:23.683 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:23.830 > Reply sent (7 bytes)
+13:15:23.847 > Packet #105 [RSSI:-114 dBm]: 56 
+13:15:23.847 > Processing command (1 bytes): V
+13:15:23.847 > Power report request received
+13:15:23.848 > Bus: 124 mV, 0 mA
+13:15:23.949 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:23.950 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:24.097 > Reply sent (7 bytes)
+13:15:24.114 > Packet #106 [RSSI:-114 dBm]: 56 
+13:15:24.114 > Processing command (1 bytes): V
+13:15:24.114 > Power report request received
+13:15:24.115 > Bus: 124 mV, 0 mA
+13:15:24.217 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:24.217 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:24.364 > Reply sent (7 bytes)
+13:15:24.381 > Packet #107 [RSSI:-114 dBm]: 56 
+13:15:24.381 > Processing command (1 bytes): V
+13:15:24.381 > Power report request received
+13:15:24.382 > Bus: 124 mV, 0 mA
+13:15:24.483 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:24.484 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:24.631 > Reply sent (7 bytes)
+13:15:24.648 > Packet #108 [RSSI:-114 dBm]: 56 
+13:15:24.648 > Processing command (1 bytes): V
+13:15:24.648 > Power report request received
+13:15:24.649 > Bus: 124 mV, 0 mA
+13:15:24.750 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:24.751 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:24.898 > Reply sent (7 bytes)
+13:15:24.915 > Packet #109 [RSSI:-114 dBm]: 56 
+13:15:24.915 > Processing command (1 bytes): V
+13:15:24.915 > Power report request received
+13:15:24.916 > Bus: 124 mV, 0 mA
+13:15:25.017 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:25.018 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:25.165 > Reply sent (7 bytes)
+13:15:25.182 > Packet #110 [RSSI:-114 dBm]: 56 
+13:15:25.182 > Processing command (1 bytes): V
+13:15:25.182 > Power report request received
+13:15:25.183 > Bus: 128 mV, 0 mA
+13:15:25.285 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:25.285 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:25.432 > Reply sent (7 bytes)
+13:15:25.449 > Packet #111 [RSSI:-114 dBm]: 56 
+13:15:25.449 > Processing command (1 bytes): V
+13:15:25.449 > Power report request received
+13:15:25.450 > Bus: 124 mV, 0 mA
+13:15:25.551 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:25.552 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:25.699 > Reply sent (7 bytes)
+13:15:25.716 > Packet #112 [RSSI:-114 dBm]: 56 
+13:15:25.716 > Processing command (1 bytes): V
+13:15:25.716 > Power report request received
+13:15:25.718 > Bus: 124 mV, 0 mA
+13:15:25.818 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:25.819 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:25.966 > Reply sent (7 bytes)
+13:15:25.983 > Packet #113 [RSSI:-114 dBm]: 56 
+13:15:25.983 > Processing command (1 bytes): V
+13:15:25.983 > Power report request received
+13:15:25.984 > Bus: 124 mV, 0 mA
+13:15:26.085 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:26.086 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:26.233 > Reply sent (7 bytes)
+13:15:26.250 > Packet #114 [RSSI:-114 dBm]: 56 
+13:15:26.250 > Processing command (1 bytes): V
+13:15:26.250 > Power report request received
+13:15:26.251 > Bus: 128 mV, 0 mA
+13:15:26.352 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:26.353 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:26.500 > Reply sent (7 bytes)
+13:15:26.517 > Packet #115 [RSSI:-114 dBm]: 56 
+13:15:26.517 > Processing command (1 bytes): V
+13:15:26.517 > Power report request received
+13:15:26.518 > Bus: 120 mV, 0 mA
+13:15:26.619 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:26.620 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:26.767 > Reply sent (7 bytes)
+13:15:26.784 > Packet #116 [RSSI:-114 dBm]: 56 
+13:15:26.784 > Processing command (1 bytes): V
+13:15:26.784 > Power report request received
+13:15:26.785 > Bus: 124 mV, 0 mA
+13:15:26.886 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:26.886 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:27.034 > Reply sent (7 bytes)
+13:15:27.051 > Packet #117 [RSSI:-114 dBm]: 56 
+13:15:27.051 > Processing command (1 bytes): V
+13:15:27.051 > Power report request received
+13:15:27.052 > Bus: 124 mV, 0 mA
+13:15:27.153 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:27.154 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:27.301 > Reply sent (7 bytes)
+13:15:27.318 > Packet #118 [RSSI:-114 dBm]: 56 
+13:15:27.318 > Processing command (1 bytes): V
+13:15:27.318 > Power report request received
+13:15:27.319 > Bus: 124 mV, 0 mA
+13:15:27.420 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:27.421 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:27.568 > Reply sent (7 bytes)
+13:15:27.585 > Packet #119 [RSSI:-114 dBm]: 56 
+13:15:27.585 > Processing command (1 bytes): V
+13:15:27.585 > Power report request received
+13:15:27.586 > Bus: 124 mV, 0 mA
+13:15:27.687 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:27.688 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:27.835 > Reply sent (7 bytes)
+13:15:27.852 > Packet #120 [RSSI:-114 dBm]: 56 
+13:15:27.852 > Processing command (1 bytes): V
+13:15:27.852 > Power report request received
+13:15:27.853 > Bus: 124 mV, 0 mA
+13:15:27.955 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:27.955 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:28.102 > Reply sent (7 bytes)
+13:15:28.119 > Packet #121 [RSSI:-114 dBm]: 56 
+13:15:28.119 > Processing command (1 bytes): V
+13:15:28.119 > Power report request received
+13:15:28.120 > Bus: 120 mV, 0 mA
+13:15:28.221 > Reverse power peak avg: 0 mV (top 3 of 10)
+13:15:28.222 > Power reply: 0.0 W (ADC: 0 mV), length: 7
+13:15:28.369 > Reply sent (7 bytes)
+13:15:28.386 > Packet #122 [RSSI:-114 dBm]: 56 
+13:15:28.386 > Processing command (1 bytes): V
+13:15:28.386 > Power report request received
+13:15:28.387 > Bus: 124 mV, 0 mA

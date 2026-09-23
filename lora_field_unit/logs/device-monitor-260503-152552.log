@@ -1,0 +1,24 @@
+15:25:52.439 > ESP-ROM:esp32s3-20210327
+15:25:52.439 > Build:Mar 27 2021
+15:25:52.439 > rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+15:25:52.439 > Saved PC:0x4202c2a2
+15:25:52.441 > SPIWP:0xee
+15:25:52.441 > mode:DIO, clock div:1
+15:25:52.442 > load:0x3fce3808,len:0x4bc
+15:25:52.445 > load:0x403c9700,len:0xbd8
+15:25:52.447 > load:0x403cc700,len:0x2a0c
+15:25:52.454 > entry 0x403c98d0
+15:25:52.546 > ..................................................
+15:25:57.596 > 
+15:25:57.596 > ========== LoRa Antenna Phaser (Heltec V3) Starting ==========
+15:25:57.597 >   CPU: 240 MHz, Free heap: 371040 bytes
+15:25:57.597 > [INIT] Enabling Vext peripheral power...
+15:25:57.796 > [INIT] Vext enabled.
+15:25:57.796 > Antenna direction set to 0 (000 deg)
+15:25:57.797 > [INIT] Relay outputs configured.
+15:25:57.797 > [INIT] ADC 12-bit resolution set.
+15:25:57.797 > [INIT] Wire started.
+15:25:57.797 > [INIT] Starting LoRa radio (CS=8, INT=14, RST=12, BUSY=13)...
+15:25:57.841 > [INIT] Radio OK: 915.0 MHz, SF9, BW125, CR4/7, TX 20 dBm
+15:25:57.841 > [INIT] Starting INA3221 (I2C addr 0x40)...
+15:25:57.841 > [INIT] ERROR: INA3221 initialization failed!

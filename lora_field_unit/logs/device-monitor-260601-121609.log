@@ -1,0 +1,1654 @@
+12:16:09.590 > ESP-ROM:esp32s3-20210327
+12:16:09.591 > Build:Mar 27 2021
+12:16:09.592 > rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+12:16:09.592 > Saved PC:0x4202bfc2
+12:16:09.593 > SPIWP:0xee
+12:16:09.594 > mode:DIO, clock div:1
+12:16:09.595 > load:0x3fce3808,len:0x4bc
+12:16:09.598 > load:0x403c9700,len:0xbd8
+12:16:09.600 > load:0x403cc700,len:0x2a0c
+12:16:09.607 > entry 0x403c98d0
+12:16:10.199 > 
+12:16:10.199 > 
+12:16:10.199 > ========== LoRa Antenna Phaser (Heltec V3) Starting ==========
+12:16:10.199 >   CPU: 240 MHz, Free heap: 371040 bytes
+12:16:10.199 > [INIT] Enabling Vext peripheral power...
+12:16:10.399 > [INIT] Vext enabled.
+12:16:10.399 > Antenna direction set to 1 (045 deg)
+12:16:10.399 > [INIT] Relay outputs configured.
+12:16:10.399 > [INIT] ADC 12-bit resolution set.
+12:16:10.399 > [INIT] Starting LoRa radio (CS=8, INT=14, RST=12, BUSY=13)...
+12:16:10.443 > [INIT] Radio OK: 915.0 MHz, SF9, BW125, CR4/7, TX 20 dBm
+12:16:10.444 > [INIT] INA219 OK.
+12:16:10.446 > Bus: 756 mV, 0 mA
+12:16:10.446 > [INIT] ========== All systems ready ==========
+12:16:10.446 > 
+12:16:22.622 > Packet #1 [RSSI:-110 dBm]: 41 50 31 30 30 30 0D 
+12:16:22.623 > Processing command (7 bytes): AP1000
+12:16:22.623 > Setting direction to 0 (000 deg)
+12:16:22.623 > Antenna direction set to 0 (000 deg)
+12:16:22.624 > Bus: 704 mV, 4 mA
+12:16:22.625 > Position reply length: 19
+12:16:22.858 > Reply sent (19 bytes)
+12:16:22.880 > Packet #2 [RSSI:-110 dBm]: 3B 30 30 30 72 2D 31 
+12:16:22.880 > Processing command (7 bytes): ;000r-1
+12:16:22.880 > Malformed 7-byte command
+12:16:22.880 > No reply to send.
+12:16:26.431 > Packet #3 [RSSI:-110 dBm]: 41 50 31 30 39 30 0D 
+12:16:26.432 > Processing command (7 bytes): AP1090
+12:16:26.432 > Setting direction to 2 (090 deg)
+12:16:26.432 > Antenna direction set to 2 (090 deg)
+12:16:26.433 > Bus: 124 mV, 0 mA
+12:16:26.433 > Position reply length: 19
+12:16:26.667 > Reply sent (19 bytes)
+12:16:26.689 > Packet #4 [RSSI:-110 dBm]: 3B 30 39 30 72 2D 31 
+12:16:26.689 > Processing command (7 bytes): ;090r-1
+12:16:26.689 > Malformed 7-byte command
+12:16:26.689 > No reply to send.
+12:16:31.610 > Packet #5 [RSSI:-109 dBm]: 56 
+12:16:31.611 > Processing command (1 bytes): V
+12:16:31.611 > Power report request received
+12:16:31.612 > Bus: 124 mV, 0 mA
+12:16:31.713 > Reverse power ADC average: 767
+12:16:31.713 > Power reply: 110.2 W (ADC: 767), length: 7
+12:16:31.860 > Reply sent (7 bytes)
+12:16:31.883 > Packet #6 [RSSI:-109 dBm]: 56 
+12:16:31.883 > Processing command (1 bytes): V
+12:16:31.883 > Power report request received
+12:16:31.885 > Bus: 124 mV, 0 mA
+12:16:31.985 > Reverse power ADC average: 444
+12:16:31.985 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:32.132 > Reply sent (7 bytes)
+12:16:32.155 > Packet #7 [RSSI:-109 dBm]: 56 
+12:16:32.155 > Processing command (1 bytes): V
+12:16:32.155 > Power report request received
+12:16:32.157 > Bus: 120 mV, 0 mA
+12:16:32.257 > Reverse power ADC average: 444
+12:16:32.257 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:32.404 > Reply sent (7 bytes)
+12:16:32.427 > Packet #8 [RSSI:-109 dBm]: 56 
+12:16:32.427 > Processing command (1 bytes): V
+12:16:32.427 > Power report request received
+12:16:32.429 > Bus: 124 mV, 0 mA
+12:16:32.529 > Reverse power ADC average: 444
+12:16:32.529 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:32.676 > Reply sent (7 bytes)
+12:16:32.699 > Packet #9 [RSSI:-109 dBm]: 56 
+12:16:32.699 > Processing command (1 bytes): V
+12:16:32.699 > Power report request received
+12:16:32.701 > Bus: 124 mV, 0 mA
+12:16:32.801 > Reverse power ADC average: 443
+12:16:32.801 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:32.948 > Reply sent (7 bytes)
+12:16:32.971 > Packet #10 [RSSI:-109 dBm]: 56 
+12:16:32.971 > Processing command (1 bytes): V
+12:16:32.971 > Power report request received
+12:16:32.973 > Bus: 124 mV, 0 mA
+12:16:33.073 > Reverse power ADC average: 444
+12:16:33.073 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:33.220 > Reply sent (7 bytes)
+12:16:33.243 > Packet #11 [RSSI:-109 dBm]: 56 
+12:16:33.243 > Processing command (1 bytes): V
+12:16:33.243 > Power report request received
+12:16:33.245 > Bus: 120 mV, 0 mA
+12:16:33.345 > Reverse power ADC average: 442
+12:16:33.345 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:33.492 > Reply sent (7 bytes)
+12:16:33.515 > Packet #12 [RSSI:-109 dBm]: 56 
+12:16:33.515 > Processing command (1 bytes): V
+12:16:33.515 > Power report request received
+12:16:33.517 > Bus: 120 mV, 0 mA
+12:16:33.617 > Reverse power ADC average: 443
+12:16:33.617 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:33.764 > Reply sent (7 bytes)
+12:16:33.787 > Packet #13 [RSSI:-109 dBm]: 56 
+12:16:33.787 > Processing command (1 bytes): V
+12:16:33.787 > Power report request received
+12:16:33.789 > Bus: 124 mV, 0 mA
+12:16:33.889 > Reverse power ADC average: 443
+12:16:33.889 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:34.036 > Reply sent (7 bytes)
+12:16:34.059 > Packet #14 [RSSI:-109 dBm]: 56 
+12:16:34.059 > Processing command (1 bytes): V
+12:16:34.059 > Power report request received
+12:16:34.061 > Bus: 124 mV, 0 mA
+12:16:34.161 > Reverse power ADC average: 443
+12:16:34.161 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:34.308 > Reply sent (7 bytes)
+12:16:34.331 > Packet #15 [RSSI:-109 dBm]: 56 
+12:16:34.331 > Processing command (1 bytes): V
+12:16:34.331 > Power report request received
+12:16:34.333 > Bus: 124 mV, 0 mA
+12:16:34.433 > Reverse power ADC average: 443
+12:16:34.433 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:34.580 > Reply sent (7 bytes)
+12:16:34.603 > Packet #16 [RSSI:-109 dBm]: 56 
+12:16:34.603 > Processing command (1 bytes): V
+12:16:34.603 > Power report request received
+12:16:34.605 > Bus: 124 mV, 0 mA
+12:16:34.705 > Reverse power ADC average: 443
+12:16:34.705 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:34.852 > Reply sent (7 bytes)
+12:16:34.875 > Packet #17 [RSSI:-109 dBm]: 56 
+12:16:34.876 > Processing command (1 bytes): V
+12:16:34.876 > Power report request received
+12:16:34.877 > Bus: 124 mV, 0 mA
+12:16:34.977 > Reverse power ADC average: 444
+12:16:34.977 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:35.124 > Reply sent (7 bytes)
+12:16:35.147 > Packet #18 [RSSI:-109 dBm]: 56 
+12:16:35.147 > Processing command (1 bytes): V
+12:16:35.147 > Power report request received
+12:16:35.149 > Bus: 120 mV, 0 mA
+12:16:35.249 > Reverse power ADC average: 443
+12:16:35.249 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:35.396 > Reply sent (7 bytes)
+12:16:35.419 > Packet #19 [RSSI:-109 dBm]: 56 
+12:16:35.419 > Processing command (1 bytes): V
+12:16:35.419 > Power report request received
+12:16:35.421 > Bus: 124 mV, 0 mA
+12:16:35.521 > Reverse power ADC average: 444
+12:16:35.522 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:35.668 > Reply sent (7 bytes)
+12:16:35.691 > Packet #20 [RSSI:-109 dBm]: 56 
+12:16:35.691 > Processing command (1 bytes): V
+12:16:35.691 > Power report request received
+12:16:35.693 > Bus: 124 mV, 0 mA
+12:16:35.793 > Reverse power ADC average: 443
+12:16:35.793 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:35.940 > Reply sent (7 bytes)
+12:16:35.963 > Packet #21 [RSSI:-109 dBm]: 56 
+12:16:35.963 > Processing command (1 bytes): V
+12:16:35.963 > Power report request received
+12:16:35.965 > Bus: 124 mV, 0 mA
+12:16:36.065 > Reverse power ADC average: 443
+12:16:36.065 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:36.212 > Reply sent (7 bytes)
+12:16:36.235 > Packet #22 [RSSI:-109 dBm]: 56 
+12:16:36.235 > Processing command (1 bytes): V
+12:16:36.235 > Power report request received
+12:16:36.237 > Bus: 124 mV, 0 mA
+12:16:36.337 > Reverse power ADC average: 444
+12:16:36.337 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:36.484 > Reply sent (7 bytes)
+12:16:36.507 > Packet #23 [RSSI:-109 dBm]: 56 
+12:16:36.507 > Processing command (1 bytes): V
+12:16:36.507 > Power report request received
+12:16:36.509 > Bus: 124 mV, 0 mA
+12:16:36.609 > Reverse power ADC average: 444
+12:16:36.609 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:36.756 > Reply sent (7 bytes)
+12:16:36.779 > Packet #24 [RSSI:-109 dBm]: 56 
+12:16:36.779 > Processing command (1 bytes): V
+12:16:36.779 > Power report request received
+12:16:36.781 > Bus: 124 mV, 0 mA
+12:16:36.881 > Reverse power ADC average: 444
+12:16:36.881 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:37.028 > Reply sent (7 bytes)
+12:16:37.051 > Packet #25 [RSSI:-109 dBm]: 56 
+12:16:37.051 > Processing command (1 bytes): V
+12:16:37.051 > Power report request received
+12:16:37.053 > Bus: 120 mV, 0 mA
+12:16:37.153 > Reverse power ADC average: 444
+12:16:37.154 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:37.300 > Reply sent (7 bytes)
+12:16:37.323 > Packet #26 [RSSI:-109 dBm]: 56 
+12:16:37.323 > Processing command (1 bytes): V
+12:16:37.323 > Power report request received
+12:16:37.325 > Bus: 124 mV, 0 mA
+12:16:37.425 > Reverse power ADC average: 444
+12:16:37.426 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:37.595 > Reply sent (7 bytes)
+12:16:37.595 > Packet #27 [RSSI:-109 dBm]: 56 
+12:16:37.595 > Processing command (1 bytes): V
+12:16:37.595 > Power report request received
+12:16:37.597 > Bus: 120 mV, 0 mA
+12:16:37.697 > Reverse power ADC average: 444
+12:16:37.697 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:37.844 > Reply sent (7 bytes)
+12:16:37.867 > Packet #28 [RSSI:-109 dBm]: 56 
+12:16:37.867 > Processing command (1 bytes): V
+12:16:37.867 > Power report request received
+12:16:37.869 > Bus: 124 mV, 0 mA
+12:16:37.969 > Reverse power ADC average: 443
+12:16:37.969 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:38.116 > Reply sent (7 bytes)
+12:16:38.139 > Packet #29 [RSSI:-109 dBm]: 56 
+12:16:38.139 > Processing command (1 bytes): V
+12:16:38.139 > Power report request received
+12:16:38.141 > Bus: 120 mV, 0 mA
+12:16:38.241 > Reverse power ADC average: 444
+12:16:38.241 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:38.411 > Reply sent (7 bytes)
+12:16:38.411 > Packet #30 [RSSI:-109 dBm]: 56 
+12:16:38.411 > Processing command (1 bytes): V
+12:16:38.411 > Power report request received
+12:16:38.413 > Bus: 124 mV, 0 mA
+12:16:38.513 > Reverse power ADC average: 443
+12:16:38.513 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:38.660 > Reply sent (7 bytes)
+12:16:38.683 > Packet #31 [RSSI:-109 dBm]: 56 
+12:16:38.683 > Processing command (1 bytes): V
+12:16:38.683 > Power report request received
+12:16:38.685 > Bus: 124 mV, 0 mA
+12:16:38.785 > Reverse power ADC average: 444
+12:16:38.785 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:38.932 > Reply sent (7 bytes)
+12:16:38.955 > Packet #32 [RSSI:-109 dBm]: 56 
+12:16:38.955 > Processing command (1 bytes): V
+12:16:38.955 > Power report request received
+12:16:38.957 > Bus: 124 mV, 0 mA
+12:16:39.057 > Reverse power ADC average: 443
+12:16:39.057 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:39.204 > Reply sent (7 bytes)
+12:16:39.227 > Packet #33 [RSSI:-109 dBm]: 56 
+12:16:39.227 > Processing command (1 bytes): V
+12:16:39.227 > Power report request received
+12:16:39.229 > Bus: 124 mV, 0 mA
+12:16:39.329 > Reverse power ADC average: 444
+12:16:39.329 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:39.476 > Reply sent (7 bytes)
+12:16:39.499 > Packet #34 [RSSI:-109 dBm]: 56 
+12:16:39.499 > Processing command (1 bytes): V
+12:16:39.499 > Power report request received
+12:16:39.501 > Bus: 124 mV, -1 mA
+12:16:39.601 > Reverse power ADC average: 444
+12:16:39.601 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:39.771 > Reply sent (7 bytes)
+12:16:39.771 > Packet #35 [RSSI:-109 dBm]: 56 
+12:16:39.771 > Processing command (1 bytes): V
+12:16:39.771 > Power report request received
+12:16:39.773 > Bus: 120 mV, 0 mA
+12:16:39.873 > Reverse power ADC average: 443
+12:16:39.873 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:40.020 > Reply sent (7 bytes)
+12:16:40.043 > Packet #36 [RSSI:-109 dBm]: 56 
+12:16:40.043 > Processing command (1 bytes): V
+12:16:40.043 > Power report request received
+12:16:40.045 > Bus: 128 mV, 0 mA
+12:16:40.145 > Reverse power ADC average: 443
+12:16:40.145 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:40.292 > Reply sent (7 bytes)
+12:16:40.315 > Packet #37 [RSSI:-109 dBm]: 56 
+12:16:40.315 > Processing command (1 bytes): V
+12:16:40.315 > Power report request received
+12:16:40.317 > Bus: 124 mV, 0 mA
+12:16:40.417 > Reverse power ADC average: 443
+12:16:40.417 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:40.564 > Reply sent (7 bytes)
+12:16:40.587 > Packet #38 [RSSI:-109 dBm]: 56 
+12:16:40.587 > Processing command (1 bytes): V
+12:16:40.587 > Power report request received
+12:16:40.589 > Bus: 124 mV, 0 mA
+12:16:40.689 > Reverse power ADC average: 443
+12:16:40.689 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:40.836 > Reply sent (7 bytes)
+12:16:40.859 > Packet #39 [RSSI:-109 dBm]: 56 
+12:16:40.859 > Processing command (1 bytes): V
+12:16:40.859 > Power report request received
+12:16:40.861 > Bus: 128 mV, 0 mA
+12:16:40.961 > Reverse power ADC average: 444
+12:16:40.961 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:41.108 > Reply sent (7 bytes)
+12:16:41.131 > Packet #40 [RSSI:-109 dBm]: 56 
+12:16:41.131 > Processing command (1 bytes): V
+12:16:41.131 > Power report request received
+12:16:41.133 > Bus: 124 mV, -1 mA
+12:16:41.233 > Reverse power ADC average: 444
+12:16:41.233 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:41.380 > Reply sent (7 bytes)
+12:16:41.403 > Packet #41 [RSSI:-109 dBm]: 56 
+12:16:41.403 > Processing command (1 bytes): V
+12:16:41.403 > Power report request received
+12:16:41.405 > Bus: 124 mV, 0 mA
+12:16:41.505 > Reverse power ADC average: 443
+12:16:41.505 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:41.653 > Reply sent (7 bytes)
+12:16:41.675 > Packet #42 [RSSI:-109 dBm]: 56 
+12:16:41.675 > Processing command (1 bytes): V
+12:16:41.675 > Power report request received
+12:16:41.677 > Bus: 124 mV, 0 mA
+12:16:41.777 > Reverse power ADC average: 443
+12:16:41.777 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:41.924 > Reply sent (7 bytes)
+12:16:41.947 > Packet #43 [RSSI:-109 dBm]: 56 
+12:16:41.947 > Processing command (1 bytes): V
+12:16:41.947 > Power report request received
+12:16:41.949 > Bus: 124 mV, 0 mA
+12:16:42.049 > Reverse power ADC average: 443
+12:16:42.049 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:42.196 > Reply sent (7 bytes)
+12:16:42.219 > Packet #44 [RSSI:-109 dBm]: 56 
+12:16:42.219 > Processing command (1 bytes): V
+12:16:42.219 > Power report request received
+12:16:42.221 > Bus: 124 mV, 0 mA
+12:16:42.321 > Reverse power ADC average: 443
+12:16:42.322 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:42.468 > Reply sent (7 bytes)
+12:16:42.491 > Packet #45 [RSSI:-109 dBm]: 56 
+12:16:42.491 > Processing command (1 bytes): V
+12:16:42.491 > Power report request received
+12:16:42.493 > Bus: 124 mV, 0 mA
+12:16:42.593 > Reverse power ADC average: 444
+12:16:42.593 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:42.740 > Reply sent (7 bytes)
+12:16:42.763 > Packet #46 [RSSI:-109 dBm]: 56 
+12:16:42.763 > Processing command (1 bytes): V
+12:16:42.763 > Power report request received
+12:16:42.765 > Bus: 124 mV, 0 mA
+12:16:42.865 > Reverse power ADC average: 443
+12:16:42.865 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:43.012 > Reply sent (7 bytes)
+12:16:43.035 > Packet #47 [RSSI:-109 dBm]: 56 
+12:16:43.035 > Processing command (1 bytes): V
+12:16:43.035 > Power report request received
+12:16:43.037 > Bus: 120 mV, 0 mA
+12:16:43.137 > Reverse power ADC average: 442
+12:16:43.137 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:43.284 > Reply sent (7 bytes)
+12:16:43.307 > Packet #48 [RSSI:-109 dBm]: 56 
+12:16:43.307 > Processing command (1 bytes): V
+12:16:43.307 > Power report request received
+12:16:43.309 > Bus: 124 mV, 0 mA
+12:16:43.409 > Reverse power ADC average: 442
+12:16:43.409 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:43.556 > Reply sent (7 bytes)
+12:16:43.579 > Packet #49 [RSSI:-109 dBm]: 56 
+12:16:43.579 > Processing command (1 bytes): V
+12:16:43.579 > Power report request received
+12:16:43.581 > Bus: 124 mV, 0 mA
+12:16:43.681 > Reverse power ADC average: 442
+12:16:43.681 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:43.828 > Reply sent (7 bytes)
+12:16:43.851 > Packet #50 [RSSI:-109 dBm]: 56 
+12:16:43.851 > Processing command (1 bytes): V
+12:16:43.851 > Power report request received
+12:16:43.853 > Bus: 124 mV, 0 mA
+12:16:43.953 > Reverse power ADC average: 442
+12:16:43.953 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:44.100 > Reply sent (7 bytes)
+12:16:44.123 > Packet #51 [RSSI:-109 dBm]: 56 
+12:16:44.123 > Processing command (1 bytes): V
+12:16:44.123 > Power report request received
+12:16:44.125 > Bus: 124 mV, 0 mA
+12:16:44.225 > Reverse power ADC average: 443
+12:16:44.225 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:44.372 > Reply sent (7 bytes)
+12:16:44.395 > Packet #52 [RSSI:-109 dBm]: 56 
+12:16:44.395 > Processing command (1 bytes): V
+12:16:44.395 > Power report request received
+12:16:44.397 > Bus: 124 mV, 0 mA
+12:16:44.497 > Reverse power ADC average: 444
+12:16:44.497 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:44.644 > Reply sent (7 bytes)
+12:16:44.667 > Packet #53 [RSSI:-109 dBm]: 56 
+12:16:44.667 > Processing command (1 bytes): V
+12:16:44.667 > Power report request received
+12:16:44.669 > Bus: 124 mV, 0 mA
+12:16:44.769 > Reverse power ADC average: 443
+12:16:44.769 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:44.916 > Reply sent (7 bytes)
+12:16:44.939 > Packet #54 [RSSI:-109 dBm]: 56 
+12:16:44.939 > Processing command (1 bytes): V
+12:16:44.939 > Power report request received
+12:16:44.941 > Bus: 124 mV, 0 mA
+12:16:45.041 > Reverse power ADC average: 444
+12:16:45.041 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:45.188 > Reply sent (7 bytes)
+12:16:45.211 > Packet #55 [RSSI:-109 dBm]: 56 
+12:16:45.211 > Processing command (1 bytes): V
+12:16:45.211 > Power report request received
+12:16:45.213 > Bus: 124 mV, 0 mA
+12:16:45.313 > Reverse power ADC average: 443
+12:16:45.313 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:45.460 > Reply sent (7 bytes)
+12:16:45.483 > Packet #56 [RSSI:-109 dBm]: 56 
+12:16:45.483 > Processing command (1 bytes): V
+12:16:45.483 > Power report request received
+12:16:45.485 > Bus: 124 mV, 0 mA
+12:16:45.585 > Reverse power ADC average: 443
+12:16:45.585 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:45.732 > Reply sent (7 bytes)
+12:16:45.755 > Packet #57 [RSSI:-109 dBm]: 56 
+12:16:45.755 > Processing command (1 bytes): V
+12:16:45.755 > Power report request received
+12:16:45.757 > Bus: 120 mV, 0 mA
+12:16:45.857 > Reverse power ADC average: 444
+12:16:45.857 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:46.004 > Reply sent (7 bytes)
+12:16:46.027 > Packet #58 [RSSI:-109 dBm]: 56 
+12:16:46.027 > Processing command (1 bytes): V
+12:16:46.027 > Power report request received
+12:16:46.029 > Bus: 124 mV, 0 mA
+12:16:46.129 > Reverse power ADC average: 444
+12:16:46.129 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:46.276 > Reply sent (7 bytes)
+12:16:46.299 > Packet #59 [RSSI:-109 dBm]: 56 
+12:16:46.299 > Processing command (1 bytes): V
+12:16:46.299 > Power report request received
+12:16:46.301 > Bus: 124 mV, 0 mA
+12:16:46.401 > Reverse power ADC average: 444
+12:16:46.401 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:46.548 > Reply sent (7 bytes)
+12:16:46.571 > Packet #60 [RSSI:-109 dBm]: 56 
+12:16:46.572 > Processing command (1 bytes): V
+12:16:46.572 > Power report request received
+12:16:46.573 > Bus: 124 mV, 0 mA
+12:16:46.673 > Reverse power ADC average: 444
+12:16:46.673 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:46.820 > Reply sent (7 bytes)
+12:16:46.843 > Packet #61 [RSSI:-109 dBm]: 56 
+12:16:46.843 > Processing command (1 bytes): V
+12:16:46.843 > Power report request received
+12:16:46.845 > Bus: 124 mV, 0 mA
+12:16:46.945 > Reverse power ADC average: 444
+12:16:46.945 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:47.092 > Reply sent (7 bytes)
+12:16:47.115 > Packet #62 [RSSI:-109 dBm]: 56 
+12:16:47.115 > Processing command (1 bytes): V
+12:16:47.115 > Power report request received
+12:16:47.117 > Bus: 124 mV, 0 mA
+12:16:47.217 > Reverse power ADC average: 444
+12:16:47.217 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:47.364 > Reply sent (7 bytes)
+12:16:47.387 > Packet #63 [RSSI:-109 dBm]: 56 
+12:16:47.387 > Processing command (1 bytes): V
+12:16:47.387 > Power report request received
+12:16:47.389 > Bus: 124 mV, 0 mA
+12:16:47.489 > Reverse power ADC average: 442
+12:16:47.489 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:47.636 > Reply sent (7 bytes)
+12:16:47.659 > Packet #64 [RSSI:-109 dBm]: 56 
+12:16:47.659 > Processing command (1 bytes): V
+12:16:47.659 > Power report request received
+12:16:47.661 > Bus: 120 mV, 0 mA
+12:16:47.761 > Reverse power ADC average: 442
+12:16:47.761 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:47.908 > Reply sent (7 bytes)
+12:16:47.931 > Packet #65 [RSSI:-109 dBm]: 56 
+12:16:47.931 > Processing command (1 bytes): V
+12:16:47.931 > Power report request received
+12:16:47.933 > Bus: 124 mV, 0 mA
+12:16:48.033 > Reverse power ADC average: 443
+12:16:48.033 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:48.180 > Reply sent (7 bytes)
+12:16:48.203 > Packet #66 [RSSI:-109 dBm]: 56 
+12:16:48.203 > Processing command (1 bytes): V
+12:16:48.203 > Power report request received
+12:16:48.205 > Bus: 124 mV, 0 mA
+12:16:48.305 > Reverse power ADC average: 443
+12:16:48.305 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:48.452 > Reply sent (7 bytes)
+12:16:48.475 > Packet #67 [RSSI:-109 dBm]: 56 
+12:16:48.475 > Processing command (1 bytes): V
+12:16:48.475 > Power report request received
+12:16:48.477 > Bus: 120 mV, 0 mA
+12:16:48.577 > Reverse power ADC average: 443
+12:16:48.577 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:48.724 > Reply sent (7 bytes)
+12:16:48.747 > Packet #68 [RSSI:-109 dBm]: 56 
+12:16:48.747 > Processing command (1 bytes): V
+12:16:48.747 > Power report request received
+12:16:48.749 > Bus: 124 mV, 0 mA
+12:16:48.849 > Reverse power ADC average: 443
+12:16:48.849 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:48.996 > Reply sent (7 bytes)
+12:16:49.019 > Packet #69 [RSSI:-109 dBm]: 56 
+12:16:49.019 > Processing command (1 bytes): V
+12:16:49.019 > Power report request received
+12:16:49.021 > Bus: 120 mV, 0 mA
+12:16:49.121 > Reverse power ADC average: 443
+12:16:49.122 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:49.268 > Reply sent (7 bytes)
+12:16:49.291 > Packet #70 [RSSI:-109 dBm]: 56 
+12:16:49.291 > Processing command (1 bytes): V
+12:16:49.291 > Power report request received
+12:16:49.293 > Bus: 120 mV, 0 mA
+12:16:49.393 > Reverse power ADC average: 442
+12:16:49.393 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:49.540 > Reply sent (7 bytes)
+12:16:49.563 > Packet #71 [RSSI:-109 dBm]: 56 
+12:16:49.563 > Processing command (1 bytes): V
+12:16:49.563 > Power report request received
+12:16:49.565 > Bus: 124 mV, 0 mA
+12:16:49.665 > Reverse power ADC average: 443
+12:16:49.665 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:49.812 > Reply sent (7 bytes)
+12:16:49.835 > Packet #72 [RSSI:-109 dBm]: 56 
+12:16:49.835 > Processing command (1 bytes): V
+12:16:49.835 > Power report request received
+12:16:49.837 > Bus: 124 mV, 0 mA
+12:16:49.937 > Reverse power ADC average: 444
+12:16:49.937 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:50.084 > Reply sent (7 bytes)
+12:16:50.107 > Packet #73 [RSSI:-109 dBm]: 56 
+12:16:50.107 > Processing command (1 bytes): V
+12:16:50.107 > Power report request received
+12:16:50.109 > Bus: 128 mV, 0 mA
+12:16:50.209 > Reverse power ADC average: 443
+12:16:50.209 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:50.356 > Reply sent (7 bytes)
+12:16:50.379 > Packet #74 [RSSI:-109 dBm]: 56 
+12:16:50.379 > Processing command (1 bytes): V
+12:16:50.379 > Power report request received
+12:16:50.381 > Bus: 124 mV, 0 mA
+12:16:50.481 > Reverse power ADC average: 442
+12:16:50.481 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:50.628 > Reply sent (7 bytes)
+12:16:50.651 > Packet #75 [RSSI:-109 dBm]: 56 
+12:16:50.651 > Processing command (1 bytes): V
+12:16:50.651 > Power report request received
+12:16:50.653 > Bus: 124 mV, 0 mA
+12:16:50.753 > Reverse power ADC average: 444
+12:16:50.753 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:50.900 > Reply sent (7 bytes)
+12:16:50.923 > Packet #76 [RSSI:-109 dBm]: 56 
+12:16:50.923 > Processing command (1 bytes): V
+12:16:50.923 > Power report request received
+12:16:50.925 > Bus: 120 mV, 0 mA
+12:16:51.025 > Reverse power ADC average: 443
+12:16:51.025 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:51.172 > Reply sent (7 bytes)
+12:16:51.195 > Packet #77 [RSSI:-109 dBm]: 56 
+12:16:51.195 > Processing command (1 bytes): V
+12:16:51.195 > Power report request received
+12:16:51.197 > Bus: 124 mV, 0 mA
+12:16:51.297 > Reverse power ADC average: 443
+12:16:51.297 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:51.444 > Reply sent (7 bytes)
+12:16:51.467 > Packet #78 [RSSI:-109 dBm]: 56 
+12:16:51.467 > Processing command (1 bytes): V
+12:16:51.467 > Power report request received
+12:16:51.469 > Bus: 120 mV, 0 mA
+12:16:51.569 > Reverse power ADC average: 443
+12:16:51.569 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:51.716 > Reply sent (7 bytes)
+12:16:51.739 > Packet #79 [RSSI:-109 dBm]: 56 
+12:16:51.739 > Processing command (1 bytes): V
+12:16:51.739 > Power report request received
+12:16:51.741 > Bus: 124 mV, 0 mA
+12:16:51.841 > Reverse power ADC average: 444
+12:16:51.841 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:51.988 > Reply sent (7 bytes)
+12:16:52.011 > Packet #80 [RSSI:-109 dBm]: 56 
+12:16:52.011 > Processing command (1 bytes): V
+12:16:52.011 > Power report request received
+12:16:52.013 > Bus: 128 mV, 0 mA
+12:16:52.113 > Reverse power ADC average: 443
+12:16:52.113 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:52.260 > Reply sent (7 bytes)
+12:16:52.283 > Packet #81 [RSSI:-109 dBm]: 56 
+12:16:52.283 > Processing command (1 bytes): V
+12:16:52.283 > Power report request received
+12:16:52.285 > Bus: 120 mV, 0 mA
+12:16:52.385 > Reverse power ADC average: 443
+12:16:52.385 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:52.532 > Reply sent (7 bytes)
+12:16:52.555 > Packet #82 [RSSI:-109 dBm]: 56 
+12:16:52.555 > Processing command (1 bytes): V
+12:16:52.555 > Power report request received
+12:16:52.557 > Bus: 128 mV, 0 mA
+12:16:52.657 > Reverse power ADC average: 443
+12:16:52.657 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:52.804 > Reply sent (7 bytes)
+12:16:52.827 > Packet #83 [RSSI:-109 dBm]: 56 
+12:16:52.827 > Processing command (1 bytes): V
+12:16:52.827 > Power report request received
+12:16:52.829 > Bus: 124 mV, 0 mA
+12:16:52.929 > Reverse power ADC average: 450
+12:16:52.929 > Power reply: 37.9 W (ADC: 450), length: 7
+12:16:53.076 > Reply sent (7 bytes)
+12:16:53.099 > Packet #84 [RSSI:-109 dBm]: 56 
+12:16:53.099 > Processing command (1 bytes): V
+12:16:53.099 > Power report request received
+12:16:53.101 > Bus: 124 mV, 0 mA
+12:16:53.201 > Reverse power ADC average: 444
+12:16:53.201 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:53.348 > Reply sent (7 bytes)
+12:16:53.371 > Packet #85 [RSSI:-109 dBm]: 56 
+12:16:53.372 > Processing command (1 bytes): V
+12:16:53.372 > Power report request received
+12:16:53.373 > Bus: 124 mV, 0 mA
+12:16:53.473 > Reverse power ADC average: 443
+12:16:53.473 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:53.620 > Reply sent (7 bytes)
+12:16:53.643 > Packet #86 [RSSI:-109 dBm]: 56 
+12:16:53.643 > Processing command (1 bytes): V
+12:16:53.643 > Power report request received
+12:16:53.645 > Bus: 124 mV, 0 mA
+12:16:53.745 > Reverse power ADC average: 443
+12:16:53.745 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:53.892 > Reply sent (7 bytes)
+12:16:53.915 > Packet #87 [RSSI:-109 dBm]: 56 
+12:16:53.915 > Processing command (1 bytes): V
+12:16:53.915 > Power report request received
+12:16:53.917 > Bus: 120 mV, 0 mA
+12:16:54.017 > Reverse power ADC average: 443
+12:16:54.017 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:54.164 > Reply sent (7 bytes)
+12:16:54.187 > Packet #88 [RSSI:-109 dBm]: 56 
+12:16:54.187 > Processing command (1 bytes): V
+12:16:54.187 > Power report request received
+12:16:54.189 > Bus: 124 mV, 0 mA
+12:16:54.289 > Reverse power ADC average: 444
+12:16:54.289 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:54.436 > Reply sent (7 bytes)
+12:16:54.459 > Packet #89 [RSSI:-109 dBm]: 56 
+12:16:54.459 > Processing command (1 bytes): V
+12:16:54.459 > Power report request received
+12:16:54.461 > Bus: 124 mV, 0 mA
+12:16:54.561 > Reverse power ADC average: 442
+12:16:54.561 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:54.708 > Reply sent (7 bytes)
+12:16:54.731 > Packet #90 [RSSI:-109 dBm]: 56 
+12:16:54.731 > Processing command (1 bytes): V
+12:16:54.731 > Power report request received
+12:16:54.733 > Bus: 124 mV, 0 mA
+12:16:54.833 > Reverse power ADC average: 443
+12:16:54.833 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:54.980 > Reply sent (7 bytes)
+12:16:55.003 > Packet #91 [RSSI:-109 dBm]: 56 
+12:16:55.003 > Processing command (1 bytes): V
+12:16:55.003 > Power report request received
+12:16:55.005 > Bus: 124 mV, 0 mA
+12:16:55.105 > Reverse power ADC average: 443
+12:16:55.105 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:55.252 > Reply sent (7 bytes)
+12:16:55.275 > Packet #92 [RSSI:-109 dBm]: 56 
+12:16:55.276 > Processing command (1 bytes): V
+12:16:55.276 > Power report request received
+12:16:55.277 > Bus: 120 mV, 0 mA
+12:16:55.377 > Reverse power ADC average: 443
+12:16:55.377 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:55.524 > Reply sent (7 bytes)
+12:16:55.547 > Packet #93 [RSSI:-109 dBm]: 56 
+12:16:55.547 > Processing command (1 bytes): V
+12:16:55.547 > Power report request received
+12:16:55.549 > Bus: 120 mV, 0 mA
+12:16:55.649 > Reverse power ADC average: 444
+12:16:55.649 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:55.796 > Reply sent (7 bytes)
+12:16:55.819 > Packet #94 [RSSI:-109 dBm]: 56 
+12:16:55.819 > Processing command (1 bytes): V
+12:16:55.819 > Power report request received
+12:16:55.821 > Bus: 124 mV, 0 mA
+12:16:55.921 > Reverse power ADC average: 444
+12:16:55.921 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:56.068 > Reply sent (7 bytes)
+12:16:56.091 > Packet #95 [RSSI:-109 dBm]: 56 
+12:16:56.091 > Processing command (1 bytes): V
+12:16:56.091 > Power report request received
+12:16:56.093 > Bus: 124 mV, 0 mA
+12:16:56.193 > Reverse power ADC average: 442
+12:16:56.193 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:56.340 > Reply sent (7 bytes)
+12:16:56.363 > Packet #96 [RSSI:-109 dBm]: 56 
+12:16:56.363 > Processing command (1 bytes): V
+12:16:56.363 > Power report request received
+12:16:56.365 > Bus: 120 mV, 0 mA
+12:16:56.465 > Reverse power ADC average: 442
+12:16:56.465 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:56.612 > Reply sent (7 bytes)
+12:16:56.635 > Packet #97 [RSSI:-109 dBm]: 56 
+12:16:56.635 > Processing command (1 bytes): V
+12:16:56.635 > Power report request received
+12:16:56.637 > Bus: 124 mV, 0 mA
+12:16:56.737 > Reverse power ADC average: 443
+12:16:56.737 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:56.884 > Reply sent (7 bytes)
+12:16:56.907 > Packet #98 [RSSI:-109 dBm]: 56 
+12:16:56.907 > Processing command (1 bytes): V
+12:16:56.907 > Power report request received
+12:16:56.909 > Bus: 124 mV, 0 mA
+12:16:57.009 > Reverse power ADC average: 443
+12:16:57.009 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:57.156 > Reply sent (7 bytes)
+12:16:57.179 > Packet #99 [RSSI:-109 dBm]: 56 
+12:16:57.179 > Processing command (1 bytes): V
+12:16:57.179 > Power report request received
+12:16:57.181 > Bus: 124 mV, 0 mA
+12:16:57.281 > Reverse power ADC average: 443
+12:16:57.281 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:57.428 > Reply sent (7 bytes)
+12:16:57.451 > Packet #100 [RSSI:-109 dBm]: 56 
+12:16:57.451 > Processing command (1 bytes): V
+12:16:57.451 > Power report request received
+12:16:57.453 > Bus: 124 mV, 0 mA
+12:16:57.553 > Reverse power ADC average: 443
+12:16:57.553 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:57.700 > Reply sent (7 bytes)
+12:16:57.723 > Packet #101 [RSSI:-109 dBm]: 56 
+12:16:57.723 > Processing command (1 bytes): V
+12:16:57.723 > Power report request received
+12:16:57.725 > Bus: 124 mV, 0 mA
+12:16:57.825 > Reverse power ADC average: 444
+12:16:57.825 > Power reply: 36.9 W (ADC: 444), length: 7
+12:16:57.972 > Reply sent (7 bytes)
+12:16:57.995 > Packet #102 [RSSI:-109 dBm]: 56 
+12:16:57.995 > Processing command (1 bytes): V
+12:16:57.995 > Power report request received
+12:16:57.997 > Bus: 124 mV, 0 mA
+12:16:58.097 > Reverse power ADC average: 452
+12:16:58.097 > Power reply: 38.3 W (ADC: 452), length: 7
+12:16:58.244 > Reply sent (7 bytes)
+12:16:58.267 > Packet #103 [RSSI:-109 dBm]: 56 
+12:16:58.267 > Processing command (1 bytes): V
+12:16:58.267 > Power report request received
+12:16:58.269 > Bus: 128 mV, 0 mA
+12:16:58.369 > Reverse power ADC average: 451
+12:16:58.369 > Power reply: 38.1 W (ADC: 451), length: 7
+12:16:58.516 > Reply sent (7 bytes)
+12:16:58.539 > Packet #104 [RSSI:-109 dBm]: 56 
+12:16:58.539 > Processing command (1 bytes): V
+12:16:58.539 > Power report request received
+12:16:58.541 > Bus: 124 mV, -1 mA
+12:16:58.641 > Reverse power ADC average: 443
+12:16:58.641 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:58.788 > Reply sent (7 bytes)
+12:16:58.811 > Packet #105 [RSSI:-109 dBm]: 56 
+12:16:58.811 > Processing command (1 bytes): V
+12:16:58.811 > Power report request received
+12:16:58.813 > Bus: 124 mV, 0 mA
+12:16:58.913 > Reverse power ADC average: 443
+12:16:58.913 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:59.060 > Reply sent (7 bytes)
+12:16:59.083 > Packet #106 [RSSI:-109 dBm]: 56 
+12:16:59.083 > Processing command (1 bytes): V
+12:16:59.083 > Power report request received
+12:16:59.085 > Bus: 124 mV, -1 mA
+12:16:59.185 > Reverse power ADC average: 443
+12:16:59.185 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:59.332 > Reply sent (7 bytes)
+12:16:59.355 > Packet #107 [RSSI:-109 dBm]: 56 
+12:16:59.355 > Processing command (1 bytes): V
+12:16:59.355 > Power report request received
+12:16:59.357 > Bus: 124 mV, 0 mA
+12:16:59.457 > Reverse power ADC average: 443
+12:16:59.457 > Power reply: 36.8 W (ADC: 443), length: 7
+12:16:59.604 > Reply sent (7 bytes)
+12:16:59.627 > Packet #108 [RSSI:-109 dBm]: 56 
+12:16:59.627 > Processing command (1 bytes): V
+12:16:59.627 > Power report request received
+12:16:59.629 > Bus: 124 mV, 0 mA
+12:16:59.729 > Reverse power ADC average: 442
+12:16:59.729 > Power reply: 36.6 W (ADC: 442), length: 7
+12:16:59.876 > Reply sent (7 bytes)
+12:16:59.899 > Packet #109 [RSSI:-109 dBm]: 56 
+12:16:59.899 > Processing command (1 bytes): V
+12:16:59.899 > Power report request received
+12:16:59.901 > Bus: 124 mV, 0 mA
+12:17:00.001 > Reverse power ADC average: 444
+12:17:00.001 > Power reply: 36.9 W (ADC: 444), length: 7
+12:17:00.148 > Reply sent (7 bytes)
+12:17:00.171 > Packet #110 [RSSI:-109 dBm]: 56 
+12:17:00.171 > Processing command (1 bytes): V
+12:17:00.171 > Power report request received
+12:17:00.173 > Bus: 120 mV, 0 mA
+12:17:00.273 > Reverse power ADC average: 443
+12:17:00.273 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:00.443 > Reply sent (7 bytes)
+12:17:00.443 > Packet #111 [RSSI:-109 dBm]: 56 
+12:17:00.443 > Processing command (1 bytes): V
+12:17:00.443 > Power report request received
+12:17:00.445 > Bus: 124 mV, 0 mA
+12:17:00.545 > Reverse power ADC average: 443
+12:17:00.545 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:00.692 > Reply sent (7 bytes)
+12:17:00.715 > Packet #112 [RSSI:-109 dBm]: 56 
+12:17:00.715 > Processing command (1 bytes): V
+12:17:00.715 > Power report request received
+12:17:00.717 > Bus: 124 mV, 0 mA
+12:17:00.817 > Reverse power ADC average: 443
+12:17:00.817 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:00.964 > Reply sent (7 bytes)
+12:17:00.987 > Packet #113 [RSSI:-109 dBm]: 56 
+12:17:00.987 > Processing command (1 bytes): V
+12:17:00.987 > Power report request received
+12:17:00.989 > Bus: 124 mV, 0 mA
+12:17:01.089 > Reverse power ADC average: 450
+12:17:01.089 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:01.236 > Reply sent (7 bytes)
+12:17:01.259 > Packet #114 [RSSI:-109 dBm]: 56 
+12:17:01.259 > Processing command (1 bytes): V
+12:17:01.259 > Power report request received
+12:17:01.261 > Bus: 124 mV, 0 mA
+12:17:01.361 > Reverse power ADC average: 443
+12:17:01.361 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:01.508 > Reply sent (7 bytes)
+12:17:01.531 > Packet #115 [RSSI:-109 dBm]: 56 
+12:17:01.531 > Processing command (1 bytes): V
+12:17:01.531 > Power report request received
+12:17:01.533 > Bus: 128 mV, 0 mA
+12:17:01.633 > Reverse power ADC average: 442
+12:17:01.633 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:01.803 > Reply sent (7 bytes)
+12:17:01.803 > Packet #116 [RSSI:-109 dBm]: 56 
+12:17:01.803 > Processing command (1 bytes): V
+12:17:01.803 > Power report request received
+12:17:01.805 > Bus: 120 mV, 0 mA
+12:17:01.905 > Reverse power ADC average: 443
+12:17:01.905 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:02.052 > Reply sent (7 bytes)
+12:17:02.075 > Packet #117 [RSSI:-109 dBm]: 56 
+12:17:02.075 > Processing command (1 bytes): V
+12:17:02.075 > Power report request received
+12:17:02.077 > Bus: 124 mV, 0 mA
+12:17:02.177 > Reverse power ADC average: 442
+12:17:02.177 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:02.324 > Reply sent (7 bytes)
+12:17:02.347 > Packet #118 [RSSI:-109 dBm]: 56 
+12:17:02.347 > Processing command (1 bytes): V
+12:17:02.347 > Power report request received
+12:17:02.349 > Bus: 124 mV, 0 mA
+12:17:02.449 > Reverse power ADC average: 443
+12:17:02.449 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:02.596 > Reply sent (7 bytes)
+12:17:02.619 > Packet #119 [RSSI:-109 dBm]: 56 
+12:17:02.619 > Processing command (1 bytes): V
+12:17:02.619 > Power report request received
+12:17:02.621 > Bus: 124 mV, 0 mA
+12:17:02.721 > Reverse power ADC average: 442
+12:17:02.721 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:02.868 > Reply sent (7 bytes)
+12:17:02.891 > Packet #120 [RSSI:-109 dBm]: 56 
+12:17:02.891 > Processing command (1 bytes): V
+12:17:02.891 > Power report request received
+12:17:02.893 > Bus: 120 mV, 0 mA
+12:17:02.993 > Reverse power ADC average: 443
+12:17:02.993 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:03.140 > Reply sent (7 bytes)
+12:17:03.163 > Packet #121 [RSSI:-109 dBm]: 56 
+12:17:03.163 > Processing command (1 bytes): V
+12:17:03.163 > Power report request received
+12:17:03.165 > Bus: 124 mV, 0 mA
+12:17:03.265 > Reverse power ADC average: 443
+12:17:03.265 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:03.435 > Reply sent (7 bytes)
+12:17:03.435 > Packet #122 [RSSI:-109 dBm]: 56 
+12:17:03.435 > Processing command (1 bytes): V
+12:17:03.435 > Power report request received
+12:17:03.437 > Bus: 124 mV, 0 mA
+12:17:03.537 > Reverse power ADC average: 442
+12:17:03.537 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:03.684 > Reply sent (7 bytes)
+12:17:03.707 > Packet #123 [RSSI:-109 dBm]: 56 
+12:17:03.707 > Processing command (1 bytes): V
+12:17:03.707 > Power report request received
+12:17:03.709 > Bus: 124 mV, 0 mA
+12:17:03.809 > Reverse power ADC average: 443
+12:17:03.809 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:03.956 > Reply sent (7 bytes)
+12:17:03.979 > Packet #124 [RSSI:-109 dBm]: 56 
+12:17:03.979 > Processing command (1 bytes): V
+12:17:03.979 > Power report request received
+12:17:03.981 > Bus: 120 mV, 0 mA
+12:17:04.081 > Reverse power ADC average: 443
+12:17:04.081 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:04.228 > Reply sent (7 bytes)
+12:17:04.251 > Packet #125 [RSSI:-109 dBm]: 56 
+12:17:04.251 > Processing command (1 bytes): V
+12:17:04.251 > Power report request received
+12:17:04.253 > Bus: 124 mV, 0 mA
+12:17:04.353 > Reverse power ADC average: 442
+12:17:04.353 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:04.500 > Reply sent (7 bytes)
+12:17:04.523 > Packet #126 [RSSI:-109 dBm]: 56 
+12:17:04.523 > Processing command (1 bytes): V
+12:17:04.523 > Power report request received
+12:17:04.525 > Bus: 120 mV, 0 mA
+12:17:04.625 > Reverse power ADC average: 443
+12:17:04.625 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:04.772 > Reply sent (7 bytes)
+12:17:04.795 > Packet #127 [RSSI:-109 dBm]: 56 
+12:17:04.795 > Processing command (1 bytes): V
+12:17:04.795 > Power report request received
+12:17:04.797 > Bus: 124 mV, 0 mA
+12:17:04.897 > Reverse power ADC average: 443
+12:17:04.897 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:05.044 > Reply sent (7 bytes)
+12:17:05.067 > Packet #128 [RSSI:-109 dBm]: 56 
+12:17:05.067 > Processing command (1 bytes): V
+12:17:05.067 > Power report request received
+12:17:05.069 > Bus: 124 mV, 0 mA
+12:17:05.169 > Reverse power ADC average: 443
+12:17:05.169 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:05.316 > Reply sent (7 bytes)
+12:17:05.339 > Packet #129 [RSSI:-109 dBm]: 56 
+12:17:05.339 > Processing command (1 bytes): V
+12:17:05.339 > Power report request received
+12:17:05.341 > Bus: 120 mV, 0 mA
+12:17:05.441 > Reverse power ADC average: 443
+12:17:05.441 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:05.588 > Reply sent (7 bytes)
+12:17:05.611 > Packet #130 [RSSI:-109 dBm]: 56 
+12:17:05.611 > Processing command (1 bytes): V
+12:17:05.611 > Power report request received
+12:17:05.613 > Bus: 124 mV, 0 mA
+12:17:05.713 > Reverse power ADC average: 443
+12:17:05.713 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:05.883 > Reply sent (7 bytes)
+12:17:05.883 > Packet #131 [RSSI:-109 dBm]: 56 
+12:17:05.883 > Processing command (1 bytes): V
+12:17:05.883 > Power report request received
+12:17:05.885 > Bus: 124 mV, 0 mA
+12:17:05.985 > Reverse power ADC average: 442
+12:17:05.985 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:06.132 > Reply sent (7 bytes)
+12:17:06.155 > Packet #132 [RSSI:-109 dBm]: 56 
+12:17:06.155 > Processing command (1 bytes): V
+12:17:06.155 > Power report request received
+12:17:06.157 > Bus: 124 mV, 0 mA
+12:17:06.257 > Reverse power ADC average: 442
+12:17:06.257 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:06.427 > Reply sent (7 bytes)
+12:17:06.427 > Packet #133 [RSSI:-109 dBm]: 56 
+12:17:06.427 > Processing command (1 bytes): V
+12:17:06.427 > Power report request received
+12:17:06.429 > Bus: 124 mV, 0 mA
+12:17:06.529 > Reverse power ADC average: 443
+12:17:06.529 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:06.676 > Reply sent (7 bytes)
+12:17:06.699 > Packet #134 [RSSI:-109 dBm]: 56 
+12:17:06.699 > Processing command (1 bytes): V
+12:17:06.699 > Power report request received
+12:17:06.701 > Bus: 124 mV, 0 mA
+12:17:06.801 > Reverse power ADC average: 452
+12:17:06.801 > Power reply: 38.3 W (ADC: 452), length: 7
+12:17:06.948 > Reply sent (7 bytes)
+12:17:06.971 > Packet #135 [RSSI:-109 dBm]: 56 
+12:17:06.971 > Processing command (1 bytes): V
+12:17:06.971 > Power report request received
+12:17:06.973 > Bus: 124 mV, 0 mA
+12:17:07.073 > Reverse power ADC average: 442
+12:17:07.073 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:07.220 > Reply sent (7 bytes)
+12:17:07.243 > Packet #136 [RSSI:-109 dBm]: 56 
+12:17:07.243 > Processing command (1 bytes): V
+12:17:07.243 > Power report request received
+12:17:07.245 > Bus: 124 mV, 0 mA
+12:17:07.345 > Reverse power ADC average: 443
+12:17:07.345 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:07.492 > Reply sent (7 bytes)
+12:17:07.515 > Packet #137 [RSSI:-109 dBm]: 56 
+12:17:07.515 > Processing command (1 bytes): V
+12:17:07.515 > Power report request received
+12:17:07.517 > Bus: 124 mV, 0 mA
+12:17:07.617 > Reverse power ADC average: 450
+12:17:07.617 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:07.764 > Reply sent (7 bytes)
+12:17:07.787 > Packet #138 [RSSI:-109 dBm]: 56 
+12:17:07.787 > Processing command (1 bytes): V
+12:17:07.787 > Power report request received
+12:17:07.789 > Bus: 124 mV, 0 mA
+12:17:07.889 > Reverse power ADC average: 442
+12:17:07.889 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:08.036 > Reply sent (7 bytes)
+12:17:08.059 > Packet #139 [RSSI:-109 dBm]: 56 
+12:17:08.059 > Processing command (1 bytes): V
+12:17:08.059 > Power report request received
+12:17:08.061 > Bus: 124 mV, -1 mA
+12:17:08.161 > Reverse power ADC average: 444
+12:17:08.161 > Power reply: 36.9 W (ADC: 444), length: 7
+12:17:08.308 > Reply sent (7 bytes)
+12:17:08.331 > Packet #140 [RSSI:-109 dBm]: 56 
+12:17:08.331 > Processing command (1 bytes): V
+12:17:08.331 > Power report request received
+12:17:08.333 > Bus: 124 mV, 0 mA
+12:17:08.433 > Reverse power ADC average: 450
+12:17:08.433 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:08.580 > Reply sent (7 bytes)
+12:17:08.603 > Packet #141 [RSSI:-109 dBm]: 56 
+12:17:08.603 > Processing command (1 bytes): V
+12:17:08.603 > Power report request received
+12:17:08.605 > Bus: 128 mV, 0 mA
+12:17:08.705 > Reverse power ADC average: 443
+12:17:08.705 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:08.852 > Reply sent (7 bytes)
+12:17:08.875 > Packet #142 [RSSI:-109 dBm]: 56 
+12:17:08.876 > Processing command (1 bytes): V
+12:17:08.876 > Power report request received
+12:17:08.877 > Bus: 124 mV, 0 mA
+12:17:08.977 > Reverse power ADC average: 443
+12:17:08.977 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:09.124 > Reply sent (7 bytes)
+12:17:09.147 > Packet #143 [RSSI:-109 dBm]: 56 
+12:17:09.147 > Processing command (1 bytes): V
+12:17:09.147 > Power report request received
+12:17:09.149 > Bus: 120 mV, 0 mA
+12:17:09.249 > Reverse power ADC average: 443
+12:17:09.249 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:09.396 > Reply sent (7 bytes)
+12:17:09.419 > Packet #144 [RSSI:-109 dBm]: 56 
+12:17:09.419 > Processing command (1 bytes): V
+12:17:09.419 > Power report request received
+12:17:09.421 > Bus: 124 mV, 0 mA
+12:17:09.521 > Reverse power ADC average: 443
+12:17:09.521 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:09.668 > Reply sent (7 bytes)
+12:17:09.691 > Packet #145 [RSSI:-109 dBm]: 56 
+12:17:09.691 > Processing command (1 bytes): V
+12:17:09.691 > Power report request received
+12:17:09.693 > Bus: 124 mV, 0 mA
+12:17:09.793 > Reverse power ADC average: 444
+12:17:09.793 > Power reply: 36.9 W (ADC: 444), length: 7
+12:17:09.940 > Reply sent (7 bytes)
+12:17:09.963 > Packet #146 [RSSI:-109 dBm]: 56 
+12:17:09.963 > Processing command (1 bytes): V
+12:17:09.963 > Power report request received
+12:17:09.965 > Bus: 124 mV, 0 mA
+12:17:10.065 > Reverse power ADC average: 443
+12:17:10.065 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:10.212 > Reply sent (7 bytes)
+12:17:10.235 > Packet #147 [RSSI:-109 dBm]: 56 
+12:17:10.235 > Processing command (1 bytes): V
+12:17:10.235 > Power report request received
+12:17:10.237 > Bus: 124 mV, 0 mA
+12:17:10.337 > Reverse power ADC average: 444
+12:17:10.337 > Power reply: 36.9 W (ADC: 444), length: 7
+12:17:10.507 > Reply sent (7 bytes)
+12:17:10.507 > Packet #148 [RSSI:-109 dBm]: 56 
+12:17:10.507 > Processing command (1 bytes): V
+12:17:10.507 > Power report request received
+12:17:10.509 > Bus: 124 mV, 0 mA
+12:17:10.609 > Reverse power ADC average: 443
+12:17:10.609 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:10.756 > Reply sent (7 bytes)
+12:17:10.779 > Packet #149 [RSSI:-109 dBm]: 56 
+12:17:10.779 > Processing command (1 bytes): V
+12:17:10.779 > Power report request received
+12:17:10.781 > Bus: 124 mV, 0 mA
+12:17:10.881 > Reverse power ADC average: 441
+12:17:10.881 > Power reply: 36.4 W (ADC: 441), length: 7
+12:17:11.028 > Reply sent (7 bytes)
+12:17:11.051 > Packet #150 [RSSI:-109 dBm]: 56 
+12:17:11.051 > Processing command (1 bytes): V
+12:17:11.051 > Power report request received
+12:17:11.053 > Bus: 124 mV, 0 mA
+12:17:11.153 > Reverse power ADC average: 442
+12:17:11.153 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:11.300 > Reply sent (7 bytes)
+12:17:11.323 > Packet #151 [RSSI:-109 dBm]: 56 
+12:17:11.323 > Processing command (1 bytes): V
+12:17:11.323 > Power report request received
+12:17:11.325 > Bus: 120 mV, 0 mA
+12:17:11.425 > Reverse power ADC average: 441
+12:17:11.425 > Power reply: 36.4 W (ADC: 441), length: 7
+12:17:11.572 > Reply sent (7 bytes)
+12:17:11.595 > Packet #152 [RSSI:-109 dBm]: 56 
+12:17:11.595 > Processing command (1 bytes): V
+12:17:11.595 > Power report request received
+12:17:11.597 > Bus: 124 mV, 0 mA
+12:17:11.697 > Reverse power ADC average: 442
+12:17:11.697 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:11.844 > Reply sent (7 bytes)
+12:17:11.867 > Packet #153 [RSSI:-109 dBm]: 56 
+12:17:11.867 > Processing command (1 bytes): V
+12:17:11.867 > Power report request received
+12:17:11.869 > Bus: 124 mV, 0 mA
+12:17:11.969 > Reverse power ADC average: 442
+12:17:11.969 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:12.116 > Reply sent (7 bytes)
+12:17:12.139 > Packet #154 [RSSI:-109 dBm]: 56 
+12:17:12.139 > Processing command (1 bytes): V
+12:17:12.139 > Power report request received
+12:17:12.141 > Bus: 124 mV, 0 mA
+12:17:12.241 > Reverse power ADC average: 442
+12:17:12.241 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:12.388 > Reply sent (7 bytes)
+12:17:12.411 > Packet #155 [RSSI:-109 dBm]: 56 
+12:17:12.411 > Processing command (1 bytes): V
+12:17:12.411 > Power report request received
+12:17:12.413 > Bus: 128 mV, 0 mA
+12:17:12.513 > Reverse power ADC average: 448
+12:17:12.513 > Power reply: 37.6 W (ADC: 448), length: 7
+12:17:12.660 > Reply sent (7 bytes)
+12:17:12.683 > Packet #156 [RSSI:-109 dBm]: 56 
+12:17:12.683 > Processing command (1 bytes): V
+12:17:12.683 > Power report request received
+12:17:12.685 > Bus: 124 mV, -1 mA
+12:17:12.785 > Reverse power ADC average: 450
+12:17:12.785 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:12.932 > Reply sent (7 bytes)
+12:17:12.955 > Packet #157 [RSSI:-109 dBm]: 56 
+12:17:12.955 > Processing command (1 bytes): V
+12:17:12.955 > Power report request received
+12:17:12.957 > Bus: 124 mV, 0 mA
+12:17:13.057 > Reverse power ADC average: 451
+12:17:13.057 > Power reply: 38.1 W (ADC: 451), length: 7
+12:17:13.204 > Reply sent (7 bytes)
+12:17:13.227 > Packet #158 [RSSI:-109 dBm]: 56 
+12:17:13.227 > Processing command (1 bytes): V
+12:17:13.227 > Power report request received
+12:17:13.229 > Bus: 124 mV, 0 mA
+12:17:13.329 > Reverse power ADC average: 443
+12:17:13.329 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:13.476 > Reply sent (7 bytes)
+12:17:13.499 > Packet #159 [RSSI:-109 dBm]: 56 
+12:17:13.499 > Processing command (1 bytes): V
+12:17:13.499 > Power report request received
+12:17:13.501 > Bus: 120 mV, 0 mA
+12:17:13.601 > Reverse power ADC average: 443
+12:17:13.601 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:13.748 > Reply sent (7 bytes)
+12:17:13.771 > Packet #160 [RSSI:-109 dBm]: 56 
+12:17:13.771 > Processing command (1 bytes): V
+12:17:13.771 > Power report request received
+12:17:13.773 > Bus: 124 mV, 0 mA
+12:17:13.873 > Reverse power ADC average: 443
+12:17:13.873 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:14.020 > Reply sent (7 bytes)
+12:17:14.043 > Packet #161 [RSSI:-109 dBm]: 56 
+12:17:14.043 > Processing command (1 bytes): V
+12:17:14.043 > Power report request received
+12:17:14.045 > Bus: 120 mV, 0 mA
+12:17:14.145 > Reverse power ADC average: 442
+12:17:14.145 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:14.292 > Reply sent (7 bytes)
+12:17:14.315 > Packet #162 [RSSI:-109 dBm]: 56 
+12:17:14.315 > Processing command (1 bytes): V
+12:17:14.315 > Power report request received
+12:17:14.317 > Bus: 124 mV, 0 mA
+12:17:14.417 > Reverse power ADC average: 442
+12:17:14.417 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:14.587 > Reply sent (7 bytes)
+12:17:14.587 > Packet #163 [RSSI:-109 dBm]: 56 
+12:17:14.587 > Processing command (1 bytes): V
+12:17:14.587 > Power report request received
+12:17:14.589 > Bus: 124 mV, 0 mA
+12:17:14.689 > Reverse power ADC average: 443
+12:17:14.689 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:14.836 > Reply sent (7 bytes)
+12:17:14.859 > Packet #164 [RSSI:-109 dBm]: 56 
+12:17:14.859 > Processing command (1 bytes): V
+12:17:14.859 > Power report request received
+12:17:14.861 > Bus: 124 mV, 0 mA
+12:17:14.961 > Reverse power ADC average: 442
+12:17:14.961 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:15.108 > Reply sent (7 bytes)
+12:17:15.131 > Packet #165 [RSSI:-109 dBm]: 56 
+12:17:15.131 > Processing command (1 bytes): V
+12:17:15.131 > Power report request received
+12:17:15.133 > Bus: 120 mV, 0 mA
+12:17:15.233 > Reverse power ADC average: 443
+12:17:15.233 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:15.380 > Reply sent (7 bytes)
+12:17:15.403 > Packet #166 [RSSI:-109 dBm]: 56 
+12:17:15.403 > Processing command (1 bytes): V
+12:17:15.403 > Power report request received
+12:17:15.405 > Bus: 124 mV, 0 mA
+12:17:15.505 > Reverse power ADC average: 443
+12:17:15.505 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:15.675 > Reply sent (7 bytes)
+12:17:15.675 > Packet #167 [RSSI:-109 dBm]: 56 
+12:17:15.675 > Processing command (1 bytes): V
+12:17:15.675 > Power report request received
+12:17:15.677 > Bus: 120 mV, 0 mA
+12:17:15.777 > Reverse power ADC average: 451
+12:17:15.777 > Power reply: 38.1 W (ADC: 451), length: 7
+12:17:15.924 > Reply sent (7 bytes)
+12:17:15.947 > Packet #168 [RSSI:-109 dBm]: 56 
+12:17:15.947 > Processing command (1 bytes): V
+12:17:15.947 > Power report request received
+12:17:15.949 > Bus: 120 mV, 0 mA
+12:17:16.049 > Reverse power ADC average: 443
+12:17:16.049 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:16.196 > Reply sent (7 bytes)
+12:17:16.219 > Packet #169 [RSSI:-109 dBm]: 56 
+12:17:16.219 > Processing command (1 bytes): V
+12:17:16.219 > Power report request received
+12:17:16.221 > Bus: 124 mV, 0 mA
+12:17:16.321 > Reverse power ADC average: 450
+12:17:16.321 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:16.468 > Reply sent (7 bytes)
+12:17:16.491 > Packet #170 [RSSI:-109 dBm]: 56 
+12:17:16.491 > Processing command (1 bytes): V
+12:17:16.491 > Power report request received
+12:17:16.493 > Bus: 124 mV, 0 mA
+12:17:16.593 > Reverse power ADC average: 442
+12:17:16.593 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:16.740 > Reply sent (7 bytes)
+12:17:16.763 > Packet #171 [RSSI:-109 dBm]: 56 
+12:17:16.763 > Processing command (1 bytes): V
+12:17:16.763 > Power report request received
+12:17:16.765 > Bus: 124 mV, 0 mA
+12:17:16.865 > Reverse power ADC average: 443
+12:17:16.865 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:17.012 > Reply sent (7 bytes)
+12:17:17.035 > Packet #172 [RSSI:-109 dBm]: 56 
+12:17:17.035 > Processing command (1 bytes): V
+12:17:17.035 > Power report request received
+12:17:17.037 > Bus: 124 mV, 0 mA
+12:17:17.137 > Reverse power ADC average: 443
+12:17:17.137 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:17.284 > Reply sent (7 bytes)
+12:17:17.307 > Packet #173 [RSSI:-109 dBm]: 56 
+12:17:17.307 > Processing command (1 bytes): V
+12:17:17.307 > Power report request received
+12:17:17.309 > Bus: 124 mV, 0 mA
+12:17:17.409 > Reverse power ADC average: 450
+12:17:17.409 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:17.556 > Reply sent (7 bytes)
+12:17:17.579 > Packet #174 [RSSI:-109 dBm]: 56 
+12:17:17.579 > Processing command (1 bytes): V
+12:17:17.579 > Power report request received
+12:17:17.581 > Bus: 124 mV, 0 mA
+12:17:17.681 > Reverse power ADC average: 443
+12:17:17.681 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:17.828 > Reply sent (7 bytes)
+12:17:17.851 > Packet #175 [RSSI:-109 dBm]: 56 
+12:17:17.851 > Processing command (1 bytes): V
+12:17:17.851 > Power report request received
+12:17:17.853 > Bus: 124 mV, 0 mA
+12:17:17.953 > Reverse power ADC average: 479
+12:17:17.953 > Power reply: 43.0 W (ADC: 479), length: 7
+12:17:18.123 > Reply sent (7 bytes)
+12:17:18.123 > Packet #176 [RSSI:-109 dBm]: 56 
+12:17:18.123 > Processing command (1 bytes): V
+12:17:18.123 > Power report request received
+12:17:18.125 > Bus: 124 mV, 0 mA
+12:17:18.225 > Reverse power ADC average: 443
+12:17:18.225 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:18.372 > Reply sent (7 bytes)
+12:17:18.395 > Packet #177 [RSSI:-109 dBm]: 56 
+12:17:18.395 > Processing command (1 bytes): V
+12:17:18.395 > Power report request received
+12:17:18.397 > Bus: 120 mV, 0 mA
+12:17:18.497 > Reverse power ADC average: 448
+12:17:18.497 > Power reply: 37.6 W (ADC: 448), length: 7
+12:17:18.644 > Reply sent (7 bytes)
+12:17:18.667 > Packet #178 [RSSI:-109 dBm]: 56 
+12:17:18.667 > Processing command (1 bytes): V
+12:17:18.667 > Power report request received
+12:17:18.669 > Bus: 124 mV, 0 mA
+12:17:18.769 > Reverse power ADC average: 443
+12:17:18.769 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:18.916 > Reply sent (7 bytes)
+12:17:18.939 > Packet #179 [RSSI:-109 dBm]: 56 
+12:17:18.939 > Processing command (1 bytes): V
+12:17:18.939 > Power report request received
+12:17:18.941 > Bus: 124 mV, 0 mA
+12:17:19.041 > Reverse power ADC average: 473
+12:17:19.041 > Power reply: 41.9 W (ADC: 473), length: 7
+12:17:19.188 > Reply sent (7 bytes)
+12:17:19.211 > Packet #180 [RSSI:-109 dBm]: 56 
+12:17:19.211 > Processing command (1 bytes): V
+12:17:19.211 > Power report request received
+12:17:19.213 > Bus: 124 mV, 0 mA
+12:17:19.313 > Reverse power ADC average: 447
+12:17:19.313 > Power reply: 37.4 W (ADC: 447), length: 7
+12:17:19.460 > Reply sent (7 bytes)
+12:17:19.483 > Packet #181 [RSSI:-109 dBm]: 56 
+12:17:19.483 > Processing command (1 bytes): V
+12:17:19.483 > Power report request received
+12:17:19.485 > Bus: 124 mV, 0 mA
+12:17:19.585 > Reverse power ADC average: 442
+12:17:19.585 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:19.755 > Reply sent (7 bytes)
+12:17:19.755 > Packet #182 [RSSI:-109 dBm]: 56 
+12:17:19.755 > Processing command (1 bytes): V
+12:17:19.755 > Power report request received
+12:17:19.757 > Bus: 124 mV, 0 mA
+12:17:19.858 > Reverse power ADC average: 443
+12:17:19.858 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:20.004 > Reply sent (7 bytes)
+12:17:20.027 > Packet #183 [RSSI:-109 dBm]: 56 
+12:17:20.027 > Processing command (1 bytes): V
+12:17:20.027 > Power report request received
+12:17:20.029 > Bus: 120 mV, 0 mA
+12:17:20.129 > Reverse power ADC average: 443
+12:17:20.129 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:20.276 > Reply sent (7 bytes)
+12:17:20.299 > Packet #184 [RSSI:-109 dBm]: 56 
+12:17:20.299 > Processing command (1 bytes): V
+12:17:20.299 > Power report request received
+12:17:20.301 > Bus: 124 mV, 0 mA
+12:17:20.401 > Reverse power ADC average: 447
+12:17:20.401 > Power reply: 37.4 W (ADC: 447), length: 7
+12:17:20.548 > Reply sent (7 bytes)
+12:17:20.571 > Packet #185 [RSSI:-109 dBm]: 56 
+12:17:20.571 > Processing command (1 bytes): V
+12:17:20.571 > Power report request received
+12:17:20.573 > Bus: 124 mV, 0 mA
+12:17:20.673 > Reverse power ADC average: 441
+12:17:20.673 > Power reply: 36.4 W (ADC: 441), length: 7
+12:17:20.820 > Reply sent (7 bytes)
+12:17:20.843 > Packet #186 [RSSI:-109 dBm]: 56 
+12:17:20.843 > Processing command (1 bytes): V
+12:17:20.843 > Power report request received
+12:17:20.845 > Bus: 120 mV, 0 mA
+12:17:20.945 > Reverse power ADC average: 442
+12:17:20.945 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:21.092 > Reply sent (7 bytes)
+12:17:21.115 > Packet #187 [RSSI:-109 dBm]: 56 
+12:17:21.115 > Processing command (1 bytes): V
+12:17:21.115 > Power report request received
+12:17:21.117 > Bus: 124 mV, 0 mA
+12:17:21.217 > Reverse power ADC average: 448
+12:17:21.217 > Power reply: 37.6 W (ADC: 448), length: 7
+12:17:21.364 > Reply sent (7 bytes)
+12:17:21.387 > Packet #188 [RSSI:-109 dBm]: 56 
+12:17:21.387 > Processing command (1 bytes): V
+12:17:21.387 > Power report request received
+12:17:21.389 > Bus: 124 mV, 0 mA
+12:17:21.489 > Reverse power ADC average: 443
+12:17:21.489 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:21.636 > Reply sent (7 bytes)
+12:17:21.659 > Packet #189 [RSSI:-109 dBm]: 56 
+12:17:21.659 > Processing command (1 bytes): V
+12:17:21.659 > Power report request received
+12:17:21.661 > Bus: 124 mV, 0 mA
+12:17:21.761 > Reverse power ADC average: 443
+12:17:21.761 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:21.908 > Reply sent (7 bytes)
+12:17:21.931 > Packet #190 [RSSI:-109 dBm]: 56 
+12:17:21.931 > Processing command (1 bytes): V
+12:17:21.931 > Power report request received
+12:17:21.933 > Bus: 120 mV, 0 mA
+12:17:22.033 > Reverse power ADC average: 443
+12:17:22.033 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:22.180 > Reply sent (7 bytes)
+12:17:22.203 > Packet #191 [RSSI:-109 dBm]: 56 
+12:17:22.203 > Processing command (1 bytes): V
+12:17:22.203 > Power report request received
+12:17:22.205 > Bus: 124 mV, 0 mA
+12:17:22.305 > Reverse power ADC average: 450
+12:17:22.305 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:22.452 > Reply sent (7 bytes)
+12:17:22.475 > Packet #192 [RSSI:-109 dBm]: 56 
+12:17:22.475 > Processing command (1 bytes): V
+12:17:22.475 > Power report request received
+12:17:22.477 > Bus: 124 mV, 0 mA
+12:17:22.577 > Reverse power ADC average: 442
+12:17:22.577 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:22.724 > Reply sent (7 bytes)
+12:17:22.747 > Packet #193 [RSSI:-109 dBm]: 56 
+12:17:22.747 > Processing command (1 bytes): V
+12:17:22.747 > Power report request received
+12:17:22.749 > Bus: 124 mV, 0 mA
+12:17:22.849 > Reverse power ADC average: 449
+12:17:22.849 > Power reply: 37.8 W (ADC: 449), length: 7
+12:17:22.996 > Reply sent (7 bytes)
+12:17:23.019 > Packet #194 [RSSI:-109 dBm]: 56 
+12:17:23.019 > Processing command (1 bytes): V
+12:17:23.019 > Power report request received
+12:17:23.021 > Bus: 124 mV, 0 mA
+12:17:23.121 > Reverse power ADC average: 464
+12:17:23.121 > Power reply: 40.3 W (ADC: 464), length: 7
+12:17:23.268 > Reply sent (7 bytes)
+12:17:23.291 > Packet #195 [RSSI:-109 dBm]: 56 
+12:17:23.291 > Processing command (1 bytes): V
+12:17:23.291 > Power report request received
+12:17:23.293 > Bus: 124 mV, 0 mA
+12:17:23.393 > Reverse power ADC average: 451
+12:17:23.393 > Power reply: 38.1 W (ADC: 451), length: 7
+12:17:23.540 > Reply sent (7 bytes)
+12:17:23.563 > Packet #196 [RSSI:-109 dBm]: 56 
+12:17:23.563 > Processing command (1 bytes): V
+12:17:23.563 > Power report request received
+12:17:23.565 > Bus: 124 mV, 0 mA
+12:17:23.665 > Reverse power ADC average: 442
+12:17:23.665 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:23.812 > Reply sent (7 bytes)
+12:17:23.835 > Packet #197 [RSSI:-109 dBm]: 56 
+12:17:23.835 > Processing command (1 bytes): V
+12:17:23.835 > Power report request received
+12:17:23.837 > Bus: 124 mV, 0 mA
+12:17:23.937 > Reverse power ADC average: 471
+12:17:23.937 > Power reply: 41.5 W (ADC: 471), length: 7
+12:17:24.084 > Reply sent (7 bytes)
+12:17:24.107 > Packet #198 [RSSI:-109 dBm]: 56 
+12:17:24.107 > Processing command (1 bytes): V
+12:17:24.107 > Power report request received
+12:17:24.109 > Bus: 120 mV, 0 mA
+12:17:24.209 > Reverse power ADC average: 451
+12:17:24.209 > Power reply: 38.1 W (ADC: 451), length: 7
+12:17:24.379 > Reply sent (7 bytes)
+12:17:24.379 > Packet #199 [RSSI:-109 dBm]: 56 
+12:17:24.379 > Processing command (1 bytes): V
+12:17:24.379 > Power report request received
+12:17:24.381 > Bus: 120 mV, 0 mA
+12:17:24.481 > Reverse power ADC average: 449
+12:17:24.481 > Power reply: 37.8 W (ADC: 449), length: 7
+12:17:24.628 > Reply sent (7 bytes)
+12:17:24.651 > Packet #200 [RSSI:-109 dBm]: 56 
+12:17:24.651 > Processing command (1 bytes): V
+12:17:24.651 > Power report request received
+12:17:24.653 > Bus: 128 mV, 0 mA
+12:17:24.753 > Reverse power ADC average: 443
+12:17:24.753 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:24.900 > Reply sent (7 bytes)
+12:17:24.923 > Packet #201 [RSSI:-109 dBm]: 56 
+12:17:24.923 > Processing command (1 bytes): V
+12:17:24.923 > Power report request received
+12:17:24.925 > Bus: 124 mV, 0 mA
+12:17:25.025 > Reverse power ADC average: 442
+12:17:25.025 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:25.172 > Reply sent (7 bytes)
+12:17:25.195 > Packet #202 [RSSI:-109 dBm]: 56 
+12:17:25.195 > Processing command (1 bytes): V
+12:17:25.195 > Power report request received
+12:17:25.197 > Bus: 120 mV, 0 mA
+12:17:25.297 > Reverse power ADC average: 450
+12:17:25.297 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:25.444 > Reply sent (7 bytes)
+12:17:25.467 > Packet #203 [RSSI:-109 dBm]: 56 
+12:17:25.467 > Processing command (1 bytes): V
+12:17:25.467 > Power report request received
+12:17:25.469 > Bus: 124 mV, 0 mA
+12:17:25.569 > Reverse power ADC average: 442
+12:17:25.569 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:25.716 > Reply sent (7 bytes)
+12:17:25.739 > Packet #204 [RSSI:-109 dBm]: 56 
+12:17:25.739 > Processing command (1 bytes): V
+12:17:25.739 > Power report request received
+12:17:25.741 > Bus: 124 mV, 0 mA
+12:17:25.841 > Reverse power ADC average: 443
+12:17:25.841 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:25.988 > Reply sent (7 bytes)
+12:17:26.011 > Packet #205 [RSSI:-109 dBm]: 56 
+12:17:26.011 > Processing command (1 bytes): V
+12:17:26.011 > Power report request received
+12:17:26.013 > Bus: 124 mV, 0 mA
+12:17:26.113 > Reverse power ADC average: 462
+12:17:26.113 > Power reply: 40.0 W (ADC: 462), length: 7
+12:17:26.260 > Reply sent (7 bytes)
+12:17:26.283 > Packet #206 [RSSI:-109 dBm]: 56 
+12:17:26.283 > Processing command (1 bytes): V
+12:17:26.283 > Power report request received
+12:17:26.285 > Bus: 124 mV, 0 mA
+12:17:26.385 > Reverse power ADC average: 468
+12:17:26.385 > Power reply: 41.0 W (ADC: 468), length: 7
+12:17:26.532 > Reply sent (7 bytes)
+12:17:26.555 > Packet #207 [RSSI:-109 dBm]: 56 
+12:17:26.555 > Processing command (1 bytes): V
+12:17:26.555 > Power report request received
+12:17:26.557 > Bus: 124 mV, 0 mA
+12:17:26.657 > Reverse power ADC average: 443
+12:17:26.657 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:26.804 > Reply sent (7 bytes)
+12:17:26.827 > Packet #208 [RSSI:-109 dBm]: 56 
+12:17:26.827 > Processing command (1 bytes): V
+12:17:26.827 > Power report request received
+12:17:26.829 > Bus: 124 mV, 0 mA
+12:17:26.929 > Reverse power ADC average: 442
+12:17:26.929 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:27.076 > Reply sent (7 bytes)
+12:17:27.099 > Packet #209 [RSSI:-109 dBm]: 56 
+12:17:27.099 > Processing command (1 bytes): V
+12:17:27.099 > Power report request received
+12:17:27.101 > Bus: 124 mV, 0 mA
+12:17:27.201 > Reverse power ADC average: 449
+12:17:27.201 > Power reply: 37.8 W (ADC: 449), length: 7
+12:17:27.348 > Reply sent (7 bytes)
+12:17:27.371 > Packet #210 [RSSI:-109 dBm]: 56 
+12:17:27.371 > Processing command (1 bytes): V
+12:17:27.371 > Power report request received
+12:17:27.373 > Bus: 124 mV, 0 mA
+12:17:27.473 > Reverse power ADC average: 448
+12:17:27.473 > Power reply: 37.6 W (ADC: 448), length: 7
+12:17:27.620 > Reply sent (7 bytes)
+12:17:27.643 > Packet #211 [RSSI:-109 dBm]: 56 
+12:17:27.643 > Processing command (1 bytes): V
+12:17:27.643 > Power report request received
+12:17:27.645 > Bus: 120 mV, 0 mA
+12:17:27.745 > Reverse power ADC average: 450
+12:17:27.745 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:27.892 > Reply sent (7 bytes)
+12:17:27.915 > Packet #212 [RSSI:-109 dBm]: 56 
+12:17:27.915 > Processing command (1 bytes): V
+12:17:27.915 > Power report request received
+12:17:27.917 > Bus: 124 mV, 0 mA
+12:17:28.017 > Reverse power ADC average: 449
+12:17:28.017 > Power reply: 37.8 W (ADC: 449), length: 7
+12:17:28.164 > Reply sent (7 bytes)
+12:17:28.187 > Packet #213 [RSSI:-109 dBm]: 56 
+12:17:28.187 > Processing command (1 bytes): V
+12:17:28.187 > Power report request received
+12:17:28.189 > Bus: 124 mV, 0 mA
+12:17:28.289 > Reverse power ADC average: 443
+12:17:28.289 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:28.459 > Reply sent (7 bytes)
+12:17:28.459 > Packet #214 [RSSI:-109 dBm]: 56 
+12:17:28.459 > Processing command (1 bytes): V
+12:17:28.459 > Power report request received
+12:17:28.461 > Bus: 124 mV, 0 mA
+12:17:28.561 > Reverse power ADC average: 449
+12:17:28.561 > Power reply: 37.8 W (ADC: 449), length: 7
+12:17:28.708 > Reply sent (7 bytes)
+12:17:28.731 > Packet #215 [RSSI:-109 dBm]: 56 
+12:17:28.731 > Processing command (1 bytes): V
+12:17:28.731 > Power report request received
+12:17:28.733 > Bus: 120 mV, 0 mA
+12:17:28.833 > Reverse power ADC average: 447
+12:17:28.833 > Power reply: 37.4 W (ADC: 447), length: 7
+12:17:28.980 > Reply sent (7 bytes)
+12:17:29.003 > Packet #216 [RSSI:-109 dBm]: 56 
+12:17:29.003 > Processing command (1 bytes): V
+12:17:29.003 > Power report request received
+12:17:29.005 > Bus: 124 mV, 0 mA
+12:17:29.105 > Reverse power ADC average: 450
+12:17:29.105 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:29.252 > Reply sent (7 bytes)
+12:17:29.275 > Packet #217 [RSSI:-109 dBm]: 56 
+12:17:29.275 > Processing command (1 bytes): V
+12:17:29.275 > Power report request received
+12:17:29.277 > Bus: 124 mV, 0 mA
+12:17:29.377 > Reverse power ADC average: 474
+12:17:29.377 > Power reply: 42.1 W (ADC: 474), length: 7
+12:17:29.524 > Reply sent (7 bytes)
+12:17:29.547 > Packet #218 [RSSI:-109 dBm]: 56 
+12:17:29.547 > Processing command (1 bytes): V
+12:17:29.547 > Power report request received
+12:17:29.549 > Bus: 124 mV, 0 mA
+12:17:29.649 > Reverse power ADC average: 451
+12:17:29.649 > Power reply: 38.1 W (ADC: 451), length: 7
+12:17:29.796 > Reply sent (7 bytes)
+12:17:29.819 > Packet #219 [RSSI:-109 dBm]: 56 
+12:17:29.819 > Processing command (1 bytes): V
+12:17:29.819 > Power report request received
+12:17:29.821 > Bus: 124 mV, 0 mA
+12:17:29.921 > Reverse power ADC average: 451
+12:17:29.921 > Power reply: 38.1 W (ADC: 451), length: 7
+12:17:30.091 > Reply sent (7 bytes)
+12:17:30.091 > Packet #220 [RSSI:-109 dBm]: 56 
+12:17:30.091 > Processing command (1 bytes): V
+12:17:30.091 > Power report request received
+12:17:30.093 > Bus: 124 mV, 0 mA
+12:17:30.193 > Reverse power ADC average: 442
+12:17:30.193 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:30.340 > Reply sent (7 bytes)
+12:17:30.363 > Packet #221 [RSSI:-109 dBm]: 56 
+12:17:30.363 > Processing command (1 bytes): V
+12:17:30.363 > Power report request received
+12:17:30.365 > Bus: 120 mV, 0 mA
+12:17:30.465 > Reverse power ADC average: 450
+12:17:30.465 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:30.612 > Reply sent (7 bytes)
+12:17:30.635 > Packet #222 [RSSI:-109 dBm]: 56 
+12:17:30.635 > Processing command (1 bytes): V
+12:17:30.635 > Power report request received
+12:17:30.637 > Bus: 124 mV, 0 mA
+12:17:30.737 > Reverse power ADC average: 451
+12:17:30.737 > Power reply: 38.1 W (ADC: 451), length: 7
+12:17:30.884 > Reply sent (7 bytes)
+12:17:30.907 > Packet #223 [RSSI:-109 dBm]: 56 
+12:17:30.907 > Processing command (1 bytes): V
+12:17:30.907 > Power report request received
+12:17:30.909 > Bus: 124 mV, 0 mA
+12:17:31.009 > Reverse power ADC average: 450
+12:17:31.009 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:31.156 > Reply sent (7 bytes)
+12:17:31.179 > Packet #224 [RSSI:-109 dBm]: 56 
+12:17:31.179 > Processing command (1 bytes): V
+12:17:31.179 > Power report request received
+12:17:31.181 > Bus: 124 mV, 0 mA
+12:17:31.281 > Reverse power ADC average: 451
+12:17:31.281 > Power reply: 38.1 W (ADC: 451), length: 7
+12:17:31.428 > Reply sent (7 bytes)
+12:17:31.451 > Packet #225 [RSSI:-109 dBm]: 56 
+12:17:31.451 > Processing command (1 bytes): V
+12:17:31.451 > Power report request received
+12:17:31.453 > Bus: 120 mV, 0 mA
+12:17:31.553 > Reverse power ADC average: 443
+12:17:31.553 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:31.700 > Reply sent (7 bytes)
+12:17:31.723 > Packet #226 [RSSI:-109 dBm]: 56 
+12:17:31.723 > Processing command (1 bytes): V
+12:17:31.723 > Power report request received
+12:17:31.725 > Bus: 124 mV, 0 mA
+12:17:31.825 > Reverse power ADC average: 443
+12:17:31.825 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:31.972 > Reply sent (7 bytes)
+12:17:31.995 > Packet #227 [RSSI:-109 dBm]: 56 
+12:17:31.995 > Processing command (1 bytes): V
+12:17:31.995 > Power report request received
+12:17:31.997 > Bus: 124 mV, 0 mA
+12:17:32.097 > Reverse power ADC average: 473
+12:17:32.097 > Power reply: 41.9 W (ADC: 473), length: 7
+12:17:32.244 > Reply sent (7 bytes)
+12:17:32.267 > Packet #228 [RSSI:-109 dBm]: 56 
+12:17:32.267 > Processing command (1 bytes): V
+12:17:32.267 > Power report request received
+12:17:32.269 > Bus: 124 mV, 0 mA
+12:17:32.369 > Reverse power ADC average: 443
+12:17:32.369 > Power reply: 36.8 W (ADC: 443), length: 7
+12:17:32.516 > Reply sent (7 bytes)
+12:17:32.539 > Packet #229 [RSSI:-109 dBm]: 56 
+12:17:32.539 > Processing command (1 bytes): V
+12:17:32.539 > Power report request received
+12:17:32.541 > Bus: 124 mV, 0 mA
+12:17:32.641 > Reverse power ADC average: 450
+12:17:32.641 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:32.788 > Reply sent (7 bytes)
+12:17:32.811 > Packet #230 [RSSI:-109 dBm]: 56 
+12:17:32.811 > Processing command (1 bytes): V
+12:17:32.811 > Power report request received
+12:17:32.813 > Bus: 124 mV, 0 mA
+12:17:32.913 > Reverse power ADC average: 442
+12:17:32.913 > Power reply: 36.6 W (ADC: 442), length: 7
+12:17:33.060 > Reply sent (7 bytes)
+12:17:33.083 > Packet #231 [RSSI:-109 dBm]: 56 
+12:17:33.083 > Processing command (1 bytes): V
+12:17:33.083 > Power report request received
+12:17:33.085 > Bus: 120 mV, 0 mA
+12:17:33.185 > Reverse power ADC average: 450
+12:17:33.185 > Power reply: 37.9 W (ADC: 450), length: 7
+12:17:33.355 > Reply sent (7 bytes)
+12:17:33.355 > Packet #232 [RSSI:-109 dBm]: 56 
+12:17:33.355 > Processing command (1 bytes): V
+12:17:33.355 > Power report request received
+12:17:33.357 > Bus: 124 mV, 0 mA
+12:17:33.457 > Reverse power ADC average: 448
+12:17:33.457 > Power reply: 37.6 W (ADC: 448), length: 7
+12:17:33.604 > Reply sent (7 bytes)
+12:17:33.627 > Packet #233 [RSSI:-109 dBm]: 56 
+12:17:33.627 > Processing command (1 bytes): V
+12:17:33.627 > Power report request received
+12:17:33.629 > Bus: 124 mV, 0 mA
+12:17:33.729 > Reverse power ADC average: 449
+12:17:33.729 > Power reply: 37.8 W (ADC: 449), length: 7
+12:17:33.876 > Reply sent (7 bytes)
+12:17:33.899 > Packet #234 [RSSI:-109 dBm]: 56 
+12:17:33.899 > Processing command (1 bytes): V
+12:17:33.899 > Power report request received
+12:17:33.901 > Bus: 120 mV, 0 mA

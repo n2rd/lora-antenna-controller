@@ -1,0 +1,21 @@
+13:25:02.986 > ESP-ROM:esp32s3-20210327
+13:25:02.987 > Build:Mar 27 2021
+13:25:02.988 > rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+13:25:02.988 > Saved PC:0x42026e9a
+13:25:02.989 > SPIWP:0xee
+13:25:02.990 > mode:DIO, clock div:1
+13:25:02.991 > load:0x3fce3808,len:0x4bc
+13:25:02.994 > load:0x403c9700,len:0xbd8
+13:25:02.996 > load:0x403cc700,len:0x2a0c
+13:25:03.003 > entry 0x403c98d0
+13:25:03.091 > ..................................................
+13:25:08.137 > 
+13:25:08.137 > ========== LoRa Antenna Controller (Heltec V4) Starting ==========
+13:25:08.138 >   CPU: 240 MHz, Free heap: 370452 bytes
+13:25:08.138 > [INIT] Enabling Vext peripheral power (GPIO36 LOW)...
+13:25:08.338 > [INIT] Vext enabled.
+13:25:08.338 > [INIT] PTT pin GPIO3 configured INPUT_PULLUP
+13:25:08.338 > [INIT] Starting Wire (SDA=41, SCL=42) for MCP23017...
+13:25:08.338 > [INIT] Wire ready.
+13:25:08.338 > [INIT] Starting LoRa radio (CS=8, INT=14)...
+13:25:08.449 > [INIT] ERROR: RF95 radio initialization failed! (check SPI pins / chip)

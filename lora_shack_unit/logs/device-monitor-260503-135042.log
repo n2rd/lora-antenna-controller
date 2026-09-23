@@ -1,0 +1,69 @@
+13:50:42.909 > ESP-ROM:esp32s3-20210327
+13:50:42.909 > Build:Mar 27 2021
+13:50:42.910 > rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+13:50:42.910 > Saved PC:0x42027982
+13:50:42.911 > SPIWP:0xee
+13:50:42.912 > mode:DIO, clock div:1
+13:50:42.913 > load:0x3fce3808,len:0x4bc
+13:50:42.916 > load:0x403c9700,len:0xbd8
+13:50:42.918 > load:0x403cc700,len:0x2a0c
+13:50:42.925 > entry 0x403c98d0
+13:50:43.014 > ..................................................
+13:50:48.056 > 
+13:50:48.056 > ========== LoRa Antenna Controller (Heltec V4) Starting ==========
+13:50:48.056 >   CPU: 240 MHz, Free heap: 371988 bytes
+13:50:48.057 > [INIT] Enabling Vext peripheral power (GPIO36 LOW)...
+13:50:48.257 > [INIT] Vext enabled.
+13:50:48.257 > [INIT] PTT pin GPIO3 configured INPUT_PULLUP
+13:50:48.257 > [INIT] Starting Wire (SDA=41, SCL=42) for MCP23017...
+13:50:48.257 > [INIT] Wire ready.
+13:50:48.257 > [INIT] Starting LoRa radio (CS=8, INT=14)...
+13:50:48.560 > ERROR: waitUntilNotBusy TIMEOUT
+13:50:48.560 > ERROR: waitUntilNotBusy TIMEOUT
+13:50:48.562 > ERROR: waitUntilNotBusy TIMEOUT
+13:50:48.562 > ERROR: waitUntilNotBusy TIMEOUT
+13:50:48.563 > [INIT] LoRa radio OK.
+13:50:48.564 > [INIT] Setting frequency 915.0 MHz...
+13:50:48.564 > ERROR: waitUntilNotBusy TIMEOUT
+13:50:48.565 > ERROR: waitUntilNotBusy TIMEOUT
+13:50:48.567 > [INIT] Radio configured: 915.0 MHz, TX Power 20 dBm
+13:50:48.567 > [INIT] Starting OLED display...
+13:50:48.616 > [INIT] OLED display OK.
+13:50:49.116 > [INIT] Starting MCP23017 (I2C addr 0x20)...
+13:50:49.142 > [INIT] MCP23017 OK.
+13:50:49.142 > [INIT] ========== All systems ready ==========
+13:50:49.142 > 
+13:51:35.957 > Button 7 pressed: NW
+13:51:35.964 > Built direction command for NW (315°)
+13:51:35.964 > Sending command (7 bytes): 41 50 31 33 31 35 0D 
+13:51:36.010 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:37.151 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:37.199 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:38.500 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:38.548 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:40.341 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:40.388 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:41.639 > ERROR: sendtoWait failed
+13:51:45.795 > Button 1 pressed: NE
+13:51:45.802 > Built direction command for NE (045°)
+13:51:45.802 > Sending command (7 bytes): 41 50 31 30 34 35 0D 
+13:51:45.802 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:45.847 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:47.060 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:47.107 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:48.792 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:48.839 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:50.430 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:50.478 > ERROR: waitUntilNotBusy TIMEOUT
+13:51:51.771 > ERROR: sendtoWait failed
+13:56:09.302 > Button 0 pressed: N
+13:56:09.309 > Built direction command for N (000°)
+13:56:09.309 > Sending command (7 bytes): 41 50 31 30 30 30 0D 
+13:56:09.355 > ERROR: waitUntilNotBusy TIMEOUT
+13:56:10.918 > ERROR: waitUntilNotBusy TIMEOUT
+13:56:10.966 > ERROR: waitUntilNotBusy TIMEOUT
+13:56:12.623 > ERROR: waitUntilNotBusy TIMEOUT
+13:56:12.671 > ERROR: waitUntilNotBusy TIMEOUT
+13:56:13.933 > ERROR: waitUntilNotBusy TIMEOUT
+13:56:13.981 > ERROR: waitUntilNotBusy TIMEOUT
+13:56:15.810 > ERROR: sendtoWait failed

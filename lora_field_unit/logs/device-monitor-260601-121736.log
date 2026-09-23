@@ -1,0 +1,25 @@
+12:17:37.000 > ESP-ROM:esp32s3-20210327
+12:17:37.000 > Build:Mar 27 2021
+12:17:37.001 > rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+12:17:37.001 > Saved PC:0x4202bfc2
+12:17:37.003 > SPIWP:0xee
+12:17:37.003 > mode:DIO, clock div:1
+12:17:37.005 > load:0x3fce3808,len:0x4bc
+12:17:37.007 > load:0x403c9700,len:0xbd8
+12:17:37.009 > load:0x403cc700,len:0x2a0c
+12:17:37.016 > entry 0x403c98d0
+12:17:37.608 > 
+12:17:37.608 > 
+12:17:37.608 > ========== LoRa Antenna Phaser (Heltec V3) Starting ==========
+12:17:37.608 >   CPU: 240 MHz, Free heap: 371040 bytes
+12:17:37.608 > [INIT] Enabling Vext peripheral power...
+12:17:37.808 > [INIT] Vext enabled.
+12:17:37.808 > Antenna direction set to 1 (045 deg)
+12:17:37.808 > [INIT] Relay outputs configured.
+12:17:37.808 > [INIT] ADC 12-bit resolution set.
+12:17:37.809 > [INIT] Starting LoRa radio (CS=8, INT=14, RST=12, BUSY=13)...
+12:17:37.853 > [INIT] Radio OK: 915.0 MHz, SF9, BW125, CR4/7, TX 20 dBm
+12:17:37.853 > [INIT] INA219 OK.
+12:17:37.855 > Bus: 500 mV, 0 mA
+12:17:37.855 > [INIT] ========== All systems ready ==========
+12:17:37.856 > 

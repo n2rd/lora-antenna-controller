@@ -1,0 +1,31 @@
+13:25:55.048 > ESP-ROM:esp32s3-20210327
+13:25:55.048 > Build:Mar 27 2021
+13:25:55.049 > rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+13:25:55.049 > Saved PC:0x4202be12
+13:25:55.051 > SPIWP:0xee
+13:25:55.051 > mode:DIO, clock div:1
+13:25:55.053 > load:0x3fce3808,len:0x4bc
+13:25:55.055 > load:0x403c9700,len:0xbd8
+13:25:55.057 > load:0x403cc700,len:0x2a0c
+13:25:55.064 > entry 0x403c98d0
+13:25:55.156 > ..................................................
+13:26:00.206 > 
+13:26:00.206 > ========== LoRa Antenna Controller (Heltec V4) Starting ==========
+13:26:00.206 >   CPU: 240 MHz, Free heap: 370160 bytes
+13:26:00.206 > [INIT] Enabling Vext peripheral power...
+13:26:00.405 > [INIT] Vext enabled.
+13:26:00.406 > [INIT] PTT pin GPIO3 configured INPUT_PULLUP
+13:26:00.406 > [INIT] Starting Wire for MCP23017...
+13:26:00.406 > [INIT] Wire ready.
+13:26:00.406 > [INIT] Starting LoRa radio (CS=8, INT=14, RST=12, BUSY=13)...
+13:26:00.444 > [INIT] Radio OK: 915.0 MHz, SF9, BW125, CR4/7, TX 20 dBm
+13:26:00.444 > [INIT] Starting OLED display...
+13:26:01.908 > [INIT] OLED OK.
+13:26:02.409 > [INIT] Starting MCP23017 (I2C addr 0x20)...
+13:26:02.441 > [INIT] MCP23017 OK.
+13:26:02.442 > [INIT] ========== All systems ready ==========
+13:26:02.442 > 
+13:26:09.978 > PTT pressed: requesting reverse power telemetry
+13:26:09.978 > Built PTT (telemetry) command
+13:26:09.978 > Sending command (1 bytes): 56
+13:26:10.338 > Reply received (7 bytes), RSSI: -94 dBm

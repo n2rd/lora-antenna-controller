@@ -1,0 +1,83 @@
+11:39:07.442 > ESP-ROM:esp32s3-20210327
+11:39:07.442 > Build:Mar 27 2021
+11:39:07.443 > rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+11:39:07.443 > Saved PC:0x4202bdfa
+11:39:07.445 > SPIWP:0xee
+11:39:07.445 > mode:DIO, clock div:1
+11:39:07.447 > load:0x3fce3808,len:0x4bc
+11:39:07.449 > load:0x403c9700,len:0xbd8
+11:39:07.452 > load:0x403cc700,len:0x2a0c
+11:39:07.459 > entry 0x403c98d0
+11:39:07.551 > ..................................................
+11:39:12.601 > 
+11:39:12.601 > ========== LoRa Antenna Controller (Heltec V4) Starting ==========
+11:39:12.601 >   CPU: 240 MHz, Free heap: 370160 bytes
+11:39:12.601 > [INIT] Enabling Vext peripheral power...
+11:39:12.801 > [INIT] Vext enabled.
+11:39:12.801 > [INIT] PTT pin GPIO3 configured INPUT_PULLUP
+11:39:12.801 > [INIT] Starting Wire for MCP23017...
+11:39:12.801 > [INIT] Wire ready.
+11:39:12.801 > [INIT] Starting LoRa radio (CS=8, INT=14, RST=12, BUSY=13)...
+11:39:12.840 > [INIT] Radio OK: 915.0 MHz, SF9, BW125, CR4/7, TX 20 dBm
+11:39:12.840 > [INIT] Starting OLED display...
+11:39:14.303 > [INIT] OLED OK.
+11:39:14.803 > [INIT] Starting MCP23017 (I2C addr 0x20)...
+11:39:14.836 > [INIT] MCP23017 OK.
+11:39:14.836 > [INIT] ========== All systems ready ==========
+11:39:14.836 > 
+11:39:31.510 > Button 1 pressed: E
+11:39:31.517 > Built direction command for E (090 deg)
+11:39:31.517 > Sending command (7 bytes): 41 50 31 30 39 30 0D
+11:39:31.918 > Reply received (19 bytes), RSSI: -105 dBm
+11:39:35.832 > Button 6 pressed: NW
+11:39:35.838 > Built direction command for NW (315 deg)
+11:39:35.838 > Sending command (7 bytes): 41 50 31 33 31 35 0D
+11:39:36.237 > Reply received (19 bytes), RSSI: -98 dBm
+11:39:41.130 > Button 5 pressed: W
+11:39:41.130 > Built direction command for W (270 deg)
+11:39:41.130 > Sending command (7 bytes): 41 50 31 32 37 30 0D
+11:39:41.531 > Reply received (19 bytes), RSSI: -97 dBm
+11:39:45.013 > Button 4 pressed: SW
+11:39:45.019 > Built direction command for SW (225 deg)
+11:39:45.019 > Sending command (7 bytes): 41 50 31 32 32 35 0D
+11:39:45.420 > Reply received (19 bytes), RSSI: -105 dBm
+11:39:48.980 > Button 3 pressed: S
+11:39:48.987 > Built direction command for S (180 deg)
+11:39:48.987 > Sending command (7 bytes): 41 50 31 31 38 30 0D
+11:39:49.384 > Reply received (19 bytes), RSSI: -93 dBm
+11:39:52.436 > Button 0 pressed: NE
+11:39:52.442 > Built direction command for NE (045 deg)
+11:39:52.443 > Sending command (7 bytes): 41 50 31 30 34 35 0D
+11:39:52.843 > Reply received (19 bytes), RSSI: -105 dBm
+11:39:57.659 > Button 1 pressed: E
+11:39:57.659 > Built direction command for E (090 deg)
+11:39:57.659 > Sending command (7 bytes): 41 50 31 30 39 30 0D
+11:39:58.057 > Reply received (19 bytes), RSSI: -105 dBm
+11:40:18.543 > Button 0 pressed: NE
+11:40:18.550 > Built direction command for NE (045 deg)
+11:40:18.551 > Sending command (7 bytes): 41 50 31 30 34 35 0D
+11:40:18.946 > Reply received (19 bytes), RSSI: -106 dBm
+11:40:32.336 > Button 1 pressed: E
+11:40:32.342 > Built direction command for E (090 deg)
+11:40:32.342 > Sending command (7 bytes): 41 50 31 30 39 30 0D
+11:40:32.740 > Reply received (19 bytes), RSSI: -109 dBm
+11:40:35.560 > Button 0 pressed: NE
+11:40:35.567 > Built direction command for NE (045 deg)
+11:40:35.567 > Sending command (7 bytes): 41 50 31 30 34 35 0D
+11:40:35.964 > Reply received (19 bytes), RSSI: -107 dBm
+11:43:12.016 > Button 1 pressed: E
+11:43:12.023 > Built direction command for E (090 deg)
+11:43:12.023 > Sending command (7 bytes): 41 50 31 30 39 30 0D
+11:43:12.423 > Reply received (19 bytes), RSSI: -101 dBm
+11:44:45.373 > Button 2 pressed: SE
+11:44:45.379 > Built direction command for SE (135 deg)
+11:44:45.379 > Sending command (7 bytes): 41 50 31 31 33 35 0D
+11:44:45.777 > Reply received (19 bytes), RSSI: -88 dBm
+11:47:09.192 > Button 7 pressed: N
+11:47:09.198 > Built direction command for N (000 deg)
+11:47:09.198 > Sending command (7 bytes): 41 50 31 30 30 30 0D
+11:47:09.597 > Reply received (19 bytes), RSSI: -99 dBm
+11:49:44.876 > Button 2 pressed: SE
+11:49:44.876 > Built direction command for SE (135 deg)
+11:49:44.876 > Sending command (7 bytes): 41 50 31 31 33 35 0D
+11:49:45.275 > Reply received (19 bytes), RSSI: -83 dBm
