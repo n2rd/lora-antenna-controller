@@ -1,27 +1,26 @@
-# LoRa Antenna Phaser
+# LoRa Field Unit for Antenna Control
 
 Professional-grade LoRa-based remote antenna rotator control with multi-element switching and comprehensive telemetry monitoring.
 
 ## Overview
 
-This project implements the **phaser/remote unit** that controls antenna rotation relays. The unit is mounted at the antenna site and provides:
+This project implements the **Field Unit** that controls antenna rotation relays in a Comtek or RemoteQTH 4SQ Antenna phasing unit. The field unit is mounted at the antenna site and provides:
 
 - **8-direction antenna switching** (N, NE, E, SE, S, SW, W, NW) - RemoteQTH configuration
 - **6 independent relay outputs** for element switching
-- **Real-time voltage and current monitoring** via INA3221
+- **Real-time voltage and current monitoring** via INA219
 - **Reverse power (SWR) measurement** via 12-bit ADC
 - **Bidirectional LoRa communication** at 915 MHz
 - **Complete telemetry reporting** (voltage, current, RSSI, etc.)
 
-The remote unit operates in conjunction with the [lora_cont](../lora_cont_2) controller unit, receiving antenna rotation commands and returning extensive telemetry data.
+The remote unit operates in conjunction with the [lora_shack_unit](../lora_shack_unit) controller unit, receiving antenna rotation commands and returning extensive telemetry data.
 
 ## Hardware Requirements
 
 ### Phaser Unit
-- **Microcontroller**: Adafruit Feather M0 (ATSAMD21G18)
-- **LoRa Radio**: RFM95W (915 MHz) - Adafruit Feather LoRa Radio
-- **Relay Module**: 6-channel relay interface module
-- **Voltage/Current Monitor**: Adafruit INA3221 3-channel power monitor
+- **Microcontroller and LoRa Radio**: Heltec V4 WiFi LoRa without display
+- **Relay Module**: 6-channel or 4-channel relay interface module
+- **Voltage/Current Monitor**: INA219 current monitor
 - **ADC Input**: Analog input from reverse power detector (12-bit, 0-3.3V)
 
 ### Required Libraries
