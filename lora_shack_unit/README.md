@@ -1,4 +1,4 @@
-# LoRa Antenna Controller
+# LoRa Antenna Controller - Shack Unit
 
 Professional-grade LoRa-based antenna azimuth controller for remote antenna selection and telemetry monitoring from the shack.
 
@@ -7,46 +7,96 @@ Professional-grade LoRa-based antenna azimuth controller for remote antenna sele
 This project implements a **controller unit** that wirelessly controls antenna rotation via LoRa radio. The controller is mounted in the shack and provides:
 
 - **8-direction antenna control** (N, NE, E, SE, S, SW, W, NW)
-- **Real-time telemetry display** on 1.3" OLED screen
-- **Button interface** for quick direction selection  
+- **Real-time telemetry display** on SSD1306 OLED screen
+- **Button interface** for quick direction selection (via MCP23017 GPIO expander)
 - **PTT button** for requesting reverse power / telemetry
 - **Serial interface** for computer control
 - **Link quality monitoring** with RSSI display
 - **Bidirectional LoRa communication** at 915 MHz
 
-The controller works in tandem with the [lora_phaser](../lora_phaser_2) remote unit, which drives the relay switches to select antenna elements.
+The controller works in tandem with the [lora_field_unit](../lora_field_unit) remote unit, which drives the relay switches to select antenna elements.
 
 ## Hardware Requirements
 
 ### Controller Unit
-- **Microcontroller**: Adafruit Feather M0 (ATSAMD21G18)
-- **LoRa Radio**: RFM95W (915 MHz) - Adafruit Feather LoRa Radio
-- **Display**: SH1106 1.3" OLED (128x64 pixels) I2C
-- **GPIO Expander**: MCP23017 I2C to digital I/O breakout
-- **Buttons**: 8 pushbuttons (1 per direction) on MCP23017 ports A
-- **LEDs**: 8 LEDs (1 per direction) on MCP23017 ports B
-- **PTT Switch**: Momentary pushbutton on pin 11
+- **Microcontroller and LoRa Radio**: Heltec WiFi LoRa 32 V3 (ESP32-S3, SX1262)
+- **OLED Display**: SSD1306 128×64 pixel display (built-in, on dedicated I2C bus)
+- **GPIO Expander**: MCP23017 I2C to digital I/O (for buttons and LEDs)
+- **Buttons**: 8 pushbuttons for direction selection (on MCP23017)
+- **LEDs**: 8 LEDs for direction indication (on MCP23017)
+- **PTT Switch**: Momentary pushbutton (GPIO3 on ESP32)
 
 ### Required Libraries
-- `epsilonrt/RadioHead@^1.122.1` - LoRa radio driver
+- `jgromes/RadioLib@^7.0.0` - LoRa radio driver (SX1262)
 - `adafruit/Adafruit MCP23017 Arduino Library@^2.3.2` - GPIO expander
-- `adafruit/Adafruit GFX Library@^1.11.11` - Graphics library
-- `adafruit/Adafruit SH110X@^2.1.11` - OLED display driver
+- `olikraus/U8g2@^2.35.9` - OLED display driver (SSD1306)
+
+## Hardware Design
+
+PCB design files and bill of materials are available in the `hardware/` folder:
+
+- **[Gerber Files](hardware/shack_gerbers/)** - Complete PCB design for manufacturing
+  - Ready for submission to PCB manufacturers (JLCPCB, OSHPark, etc.)
+  - Includes all layers for 2-layer board construction
+
+- **[Bill of Materials (BOM)](hardware/shack_bom.csv)** - Complete component list
+  - CSV format compatible with most electronics suppliers
+  - Includes part numbers, quantities, and reference designators
+  - Use for ordering components from Digi-Key, Mouser, etc.
+
+3D-printable enclosure files are available in the `STL/` folder:
+
+- **[3D Enclosure Files](STL/)** - Ready-to-print case for the shack controller
+  - `Top.stl` - Top enclosure piece
+  - `Bottom.stl` - Bottom enclosure piece
+  - `Bracket.stl` - Mount bracket for desk/shelf mounting
+  - Recommended for SLA or FDM 3D printers with support material
+  - Print orientation and parameters depend on your printer
+
+### Assembly and Manufacturing
+
+1. Download gerber files and submit to your PCB manufacturer
+2. Review the BOM CSV file and order components
+3. Use a reflow oven or soldering iron for assembly
+4. Download and 3D print the STL files for the enclosure and bracket
+5. See individual component datasheets for proper solder joint techniques
 
 ## Pinouts
 
+### LoRa Radio (SX1262 via SPI)
 | Function | Pin | Notes |
 |----------|-----|-------|
-| SPI Clock | 24 | SAMD21 SPI |
-| SPI MOSI | 23 | SAMD21 SPI |
-| SPI MISO | 22 | SAMD21 SPI |
-| LoRa CS | 8 | Radio chip select |
-| LoRa INT | 3 | Radio interrupt |
-| LoRa IRQ | 3 | Same as INT |
-| Status LED | 13 | Onboard LED |
-| PTT Button | 11 | Input (pull-up) |
-| I2C SDA | 20 | SAMD21 I2C (display, MCP) |
-| I2C SCL | 21 | SAMD21 I2C (display, MCP) |
+| Radio CS | 8 | Chip Select |
+| Radio BUSY | 13 | Busy signal |
+| Radio RST | 12 | Reset |
+| Radio DIO1 | 14 | Interrupt (IRQ) |
+| RF FEM EN | 2 | RF Front-End Module Enable |
+| RF FEM PA | 46 | RF Power Amplifier Enable |
+| SPI SCLK | 12 | (Hardware SPI) |
+| SPI MOSI | 11 | (Hardware SPI) |
+| SPI MISO | 13 | (Hardware SPI) |
+
+### Display and I2C
+| Function | Pin | Notes |
+|----------|-----|-------|
+| OLED SDA | 17 | I2C1 (built-in display) |
+| OLED SCL | 18 | I2C1 (built-in display) |
+| OLED RST | 21 | Reset pin |
+| MCP SDA | 41 | I2C (external GPIO expander) |
+| MCP SCL | 42 | I2C (external GPIO expander) |
+
+### Buttons and User Input
+| Function | Pin | Notes |
+|----------|-----|-------|
+| PTT Button | 3 | GPIO3, INPUT_PULLUP, active LOW |
+| Direction Buttons | MCP23017 0-7 | 8 buttons on GPIO expander ports A |
+| Direction LEDs | MCP23017 8-15 | 8 LEDs on GPIO expander ports B |
+
+### Power and Control
+| Function | Pin | Notes |
+|----------|-----|-------|
+| Status LED | 35 | Onboard LED (LED_BUILTIN) |
+| VEXT EN | 36 | Peripheral power control (active LOW) |
 
 ## Features
 
@@ -59,14 +109,14 @@ The controller works in tandem with the [lora_phaser](../lora_phaser_2) remote u
 ### Display Output
 Shows real-time antenna telemetry:
 ```
-Rev 1250.5 W
+Rev 12.5 W
 RSSI: -095 dBm
 Pos: 045
 Dir: NE
 ```
 
 ### Serial Interface
-- Baud rate: **4800** (compatible with DCU-1 controllers)
+- Baud rate: **115200** (USB CDC on ESP32-S3)
 - Can accept direction names: `N`, `NE`, `E`, `SE`, `S`, `SW`, `W`, `NW`
 - Can accept angle values: `0`, `45`, `90`, `135`, `180`, `225`, `270`, `315`
 
@@ -80,44 +130,93 @@ Dir: NE
 All hardware pins and protocol parameters are defined in `include/config.h`:
 
 ```cpp
-#define RF95_FREQ 915.0         // LoRa frequency
+#define SX1262_FREQ 915.0       // LoRa frequency
 #define MY_ADDRESS 211          // This controller's address
-#define DEST_ADDRESS 212        // Remote phaser unit address
-#define RF95_CS 8               // Radio chip select
-#define RF95_INT 3              // Radio interrupt pin
-#define PTT_PIN 11              // PTT button input
+#define DEST_ADDRESS 212        // Remote field unit address
+#define MCP_I2C_ADDRESS 0x20    // MCP23017 I2C address
+#define OLED_I2C_ADDRESS 0x3C   // SSD1306 OLED I2C address
+#define PTT_PIN 3               // PTT button input (GPIO3)
 ```
+
+## Quick Start with Pre-Built Binaries
+
+Pre-compiled binaries are available in the [GitHub Releases](https://github.com/your-org/lora-antenna-controller/releases):
+
+- `lora_shack_unit.bin` - Complete shack controller unit firmware
+
+### Flashing with ESP Web Tools (Recommended - No Installation Required!)
+
+1. **Download the binary** from [Releases](https://github.com/your-org/lora-antenna-controller/releases)
+
+2. **Connect your Heltec device** via USB cable
+
+3. **Open ESP Web Tools** in your browser:
+   - Visit: https://esp.huhn.me/
+   - Or use: https://web.esphome.io/
+
+4. **Click "Connect"** and select your device's serial port from the popup
+
+5. **Select the binary file**:
+   - Click "Choose file" and select `lora_shack_unit.bin`
+
+6. **Click "Program"** and wait for the flash to complete
+
+7. **Done!** The device will reboot automatically
+
+That's it! No command line needed.
 
 ## Building and Uploading
 
 ### With PlatformIO (Recommended)
 
 ```bash
+cd lora_shack_unit
+
 # Build the project
-pio run -e adafruit_feather_m0
+pio run -e heltec_wifi_lora_32_V3
 
 # Upload to device
-pio run -t upload -e adafruit_feather_m0
+pio run -t upload -e heltec_wifi_lora_32_V3
 
-# Monitor serial output
-pio device monitor -b 4800
+# Monitor serial output (115200 baud)
+pio device monitor -b 115200
 ```
 
 ### With Arduino IDE
 
-1. Install Adafruit board definitions
-2. Select "Adafruit Feather M0" as board
-3. Ensure all required libraries are installed
-4. Upload sketch
+1. Install ESP32 board definitions (via Boards Manager: "esp32")
+2. Install Heltec board support (https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series)
+3. Select "Heltec WiFi LoRa 32(V3)" as board
+4. Install required libraries:
+   - RadioLib (jgromes/RadioLib)
+   - U8g2 (olikraus/U8g2)
+   - Adafruit MCP23017 Arduino Library
+5. Upload sketch
 
-## PCB and Wiring Diagram
+## Troubleshooting
 
-Refer to the hardware documentation:
-- [Controller Schematic](docs/controller_schematic.png)
-- [Relay Wiring Guide](docs/relay_wiring.md)
-- [I2C Bus Connections](docs/i2c_layout.md)
+### No communication with field unit
+1. Check LoRa antenna is properly connected to SMA connector
+2. Test radio with debug output enabled (`#define DEBUG 1` in config.h)
+3. Check address settings in `config.h` match field unit (MY_ADDRESS=211, DEST_ADDRESS=212)
+4. Verify frequency matches: 915.0 MHz
 
-## Operation
+### Display not showing anything
+1. Check OLED display is properly seated
+2. Verify I2C address is 0x3C (SSD1306)
+3. Enable debug output to monitor I2C initialization errors
+
+### Buttons not responding
+1. Check MCP23017 is properly seated on breadboard or module
+2. Verify I2C address matches config (0x20 default)
+3. Check button wiring to MCP pins (should be between pin and GND)
+4. Verify MCP I2C address via I2C scanner if issues persist
+
+### PTT button not working
+1. Verify GPIO3 is not being used elsewhere
+2. Check button wiring (pin 3 to GND for activation)
+3. Ensure INPUT_PULLUP is enabled
+4. Test with serial debug enabled
 
 ### Startup Sequence
 1. Serial output shows initialization messages
@@ -156,50 +255,20 @@ Position reply includes:
 - Bus voltage and current
 - MCU supply voltage
 
-## Troubleshooting
-
-### No communication with phaser unit
-1. Check LoRa radio is properly soldered
-2. Verify antenna connector is secure
-3. Test radio with debug output enabled (`#define DEBUG 1`)
-4. Check address settings in `config.h`
-
-### Display not showing anything
-1. Check I2C pullup resistors (typically 4.7kΩ)
-2. Verify display address (0x3C default)
-3. Check SDA/SCL wiring
-4. Enable debug output to monitor I2C errors
-
-### Buttons not responding
-1. Check MCP23017 is properly inserted in breadboard
-2. Verify I2C address matches config (0x20 default)
-3. Check button wiring - should be between pin and GND
-4. Verify pull-up resistors on MCP pins are enabled
-
-## License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions are welcome! Please follow these guidelines:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## References
 
-- [RadioHead Reliable Datagram Documentation](http://www.airspayce.com/mikem/arduino/RadioHead/)
+- [RadioLib Documentation](https://jgromes.github.io/RadioLib/)
 - [Yaesu DCU-1 Rotator Protocol](https://www.yaesu.com)
-- [Adafruit Feather M0 Pinout](https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-rfm95-module)
-- [RFM95 LoRa Module Datasheet](https://cdn-shop.adafruit.com/product-files/3173/RFM95_97_98_module+Schematic.pdf)
+- [Heltec WiFi LoRa 32 V3 Documentation](https://docs.heltec.org/en/node/esp32/dev-board/lora/index.html)
+- [Heltec GitHub](https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series)
+- [SX1262 LoRa Module Datasheet](https://www.semtech.com/products/wireless-rf/lora-transceivers/sx1262)
+- [MCP23017 I/O Expander Datasheet](https://ww1.microchip.com/en-US/product/mcp23017)
+- [U8g2 Library](https://github.com/olikraus/u8g2)
+- [Adafruit MCP23017 Arduino Library](https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library)
 
 ## Authors
 
-- Your Name - Initial work
+- Rajiv Dewan, N2RD rmdewan@gmail.com
 
 ## Acknowledgments
 

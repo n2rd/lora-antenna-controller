@@ -4,9 +4,10 @@ Professional-grade LoRa-based remote antenna rotator control with multi-element 
 
 ## Overview
 
-This project implements the **Field Unit** that controls antenna rotation relays in a Comtek or RemoteQTH 4SQ Antenna phasing unit. The field unit is mounted at the antenna site and provides:
+This project implements the **Field Unit** that controls antenna rotation relays in a RemoteQTH or Comtek 4SQ antenna phasing unit. The field unit is mounted at the antenna site and provides:
 
 - **8-direction antenna switching** (N, NE, E, SE, S, SW, W, NW) - RemoteQTH configuration
+- **4-direction antenna switching** (N, E, S, W) - Comtek configuration (via compile-time selection)
 - **6 independent relay outputs** for element switching
 - **Real-time voltage and current monitoring** via INA219
 - **Reverse power (SWR) measurement** via 12-bit ADC
@@ -17,36 +18,78 @@ The remote unit operates in conjunction with the [lora_shack_unit](../lora_shack
 
 ## Hardware Requirements
 
-### Phaser Unit
-- **Microcontroller and LoRa Radio**: Heltec V4 WiFi LoRa without display
-- **Relay Module**: 6-channel or 4-channel relay interface module
-- **Voltage/Current Monitor**: INA219 current monitor
-- **ADC Input**: Analog input from reverse power detector (12-bit, 0-3.3V)
+### Field Unit
+- **Microcontroller and LoRa Radio**: Heltec WiFi LoRa 32 V4 (ESP32-S3, SX1262)
+- **Relay Module**: 6-channel relay interface module (GPIO controlled)
+- **Voltage/Current Monitor**: Adafruit INA219 (I2C, address 0x40)
+- **ADC Input**: Analog input from reverse power detector (12-bit, 0-3.3V on GPIO6)
 
 ### Required Libraries
-- `mikem/RadioHead@^1.120` - LoRa radio driver
-- `adafruit/Adafruit INA3221 Library@^1.0.1` - Power monitoring
-- `rweather/Crypto@^0.4.0` - Optional encryption support
+- `jgromes/RadioLib@^7.0.0` - LoRa radio driver (SX1262)
+- `adafruit/Adafruit INA219@^1.2.3` - Power monitoring
+
+## Hardware Design
+
+PCB design files and bill of materials are available in the `hardware/` folder:
+
+- **[Gerber Files](hardware/field_gerbers/)** - Complete PCB design for manufacturing
+  - Ready for submission to PCB manufacturers (JLCPCB, OSHPark, etc.)
+  - Includes all layers for 2-layer board construction
+
+- **[Bill of Materials (BOM)](hardware/field_bom.csv)** - Complete component list
+  - CSV format compatible with most electronics suppliers
+  - Includes part numbers, quantities, and reference designators
+  - Use for ordering components from Digi-Key, Mouser, etc.
+
+3D-printable enclosure files are available in the `STL/` folder:
+
+- **[3D Enclosure Files](STL/)** - Ready-to-print case for the field unit
+  - `Top.stl` - Top enclosure piece
+  - `Bottom.stl` - Bottom enclosure piece
+  - Recommended for SLA or FDM 3D printers with support material
+  - Print orientation and parameters depend on your printer
+
+### Assembly and Manufacturing
+
+1. Download gerber files and submit to your PCB manufacturer
+2. Review the BOM CSV file and order components
+3. Use a reflow oven or soldering iron for assembly
+4. Download and 3D print the STL files for the enclosure
+5. See individual component datasheets for proper solder joint techniques
 
 ## Pinouts
 
+### LoRa Radio (SX1262 via SPI)
 | Function | Pin | Notes |
 |----------|-----|-------|
-| SPI Clock | 24 | SAMD21 SPI |
-| SPI MOSI | 23 | SAMD21 SPI |
-| SPI MISO | 22 | SAMD21 SPI |
-| LoRa CS | 8 | Radio chip select |
-| LoRa INT | 3 | Radio interrupt |
-| Status LED | 13 | Onboard LED |
-| Relay 1 | 6 | Element 1 (North) |
-| Relay 2 | 5 | Element 2 (South) |
-| Relay 3 | 10 | Element 3 (East) |
-| Relay 4 | 11 | Element 4 (West) |
-| Relay 5/6 | 12 | Parallel relay group |
-| Relay 7/8 | 15 | Parallel relay group |
-| Rev Power ADC | A2 | Analog reverse power input |
-| I2C SDA | 20 | SAMD21 I2C (INA3221) |
-| I2C SCL | 21 | SAMD21 I2C (INA3221) |
+| Radio CS | 8 | Chip Select |
+| Radio BUSY | 13 | Busy signal |
+| Radio RST | 12 | Reset |
+| Radio DIO1 | 14 | Interrupt (IRQ) |
+| RF FEM EN | 2 | RF Front-End Module Enable |
+| RF FEM PA | 46 | RF Power Amplifier Enable |
+| SPI SCLK | 12 | (Hardware SPI) |
+| SPI MOSI | 11 | (Hardware SPI) |
+| SPI MISO | 13 | (Hardware SPI) |
+
+### Relay Outputs
+| Relay | Pin | Purpose |
+|-------|-----|---------|
+| Relay 1 | 3 | Element 1 |
+| Relay 2 | 4 | Element 2 |
+| Relay 3 | 5 | Element 3 |
+| Relay 4 | 33 | Element 4 |
+| Relay 5/6 | 47 | Parallel relay group |
+| Relay 7/8 | 48 | Parallel relay group |
+
+### Sensors
+| Function | Pin | Notes |
+|----------|-----|-------|
+| Rev Power ADC | 6 | Analog reverse power input (ADC1 Ch6) |
+| I2C SDA | 41 | I2C for INA219 |
+| I2C SCL | 42 | I2C for INA219 |
+| Status LED | 35 | Onboard LED (LED_BUILTIN) |
+| VEXT EN | 36 | Peripheral power control (active LOW) |
 
 ## Features
 
@@ -75,20 +118,6 @@ The remote unit operates in conjunction with the [lora_shack_unit](../lora_shack
 | W/NW | 270-315° | 1,1,... | Pattern D |
 
 **Note**: Comtek uses only 2 primary relays for 4 directions. Angles within each quadrant are mapped to the closest cardinal direction.
-
-### Choosing Your Antenna Configuration
-
-**Use RemoteQTH if:**
-- You need precise 8-direction control
-- Your antenna supports element phasing
-- You want maximum directional flexibility
-- Implementing a modern antenna platform
-
-**Use Comtek if:**
-- You have a legacy Comtek antenna rotator
-- You only need 4-direction support
-- Relay hardware is limited to 2 main controls
-- Backward compatibility is important
 
 ### Protocol
 
@@ -141,21 +170,59 @@ The phaser unit supports **two antenna controller types** selectable at compile 
 - Simpler relay switching
 - Compatible with older Comtek rotators
 
-### Building for Different Antenna Types
+
+## Quick Start with Pre-Built Binaries
+
+Pre-compiled binaries are available in the [GitHub Releases](https://github.com/your-org/lora-antenna-controller/releases) for both RemoteQTH and Comtek configurations:
+
+- `lora_field_unit_remoteqth.bin` - 8-direction RemoteQTH antenna controller (default)
+- `lora_field_unit_comtek.bin` - 4-direction Comtek antenna controller
+
+### Flashing with ESP Web Tools (Recommended - No Installation Required!)
+
+1. **Download the binary** from [Releases](https://github.com/your-org/lora-antenna-controller/releases)
+
+2. **Connect your Heltec device** via USB cable
+
+3. **Open ESP Web Tools** in your browser:
+   - Visit: https://esp.huhn.me/
+   - Or use: https://web.esphome.io/
+
+4. **Click "Connect"** and select your device's serial port from the popup
+
+5. **Select the binary file**:
+   - Click "Choose file" and select `lora_field_unit_remoteqth.bin` or `lora_field_unit_comtek.bin`
+
+6. **Click "Program"** and wait for the flash to complete
+
+7. **Done!** The device will reboot automatically
+
+That's it! No command line needed.
+
+### Building for Different Antenna Types using PlatformIO
 
 **For RemoteQTH (default, 8-direction):**
 ```bash
-pio run -t upload -e adafruit_feather_m0
+cd lora_field_unit
+pio run -t upload -e heltec_wifi_lora_32_V3
 ```
 
 **For Comtek (4-direction):**
 ```bash
-pio run -t upload -e adafruit_feather_m0_comtek
+cd lora_field_unit
+pio run -t upload -e heltec_wifi_lora_32_V3 -D ANTENNA_CONFIG=2
 ```
 
 ### Configuration at Compile Time
 
-The antenna type is controlled via the `ANTENNA_CONFIG` define in `platformio.ini`:
+The antenna type is controlled via the `ANTENNA_CONFIG` define in `include/config.h`:
+
+```cpp
+#define ANTENNA_CONFIG ANTENNA_REMOTEQTH  // 1 = RemoteQTH
+#define ANTENNA_CONFIG ANTENNA_COMTEK     // 2 = Comtek
+```
+
+Or via `platformio.ini`:
 
 ```ini
 ; RemoteQTH (default)
@@ -165,31 +232,30 @@ build_flags = -D ANTENNA_CONFIG=1
 build_flags = -D ANTENNA_CONFIG=2
 ```
 
-Or override directly in `include/config.h`:
+### Radio and Hardware Parameters
+
 ```cpp
-#define ANTENNA_CONFIG ANTENNA_REMOTEQTH  // or ANTENNA_COMTEK
+#define SX1262_FREQ 915.0         // LoRa frequency
+#define MY_ADDRESS 212            // This remote unit's address
+#define CTRL_ADDRESS 211          // Controller unit address
+#define INA219_I2C_ADDRESS 0x40   // Power monitor I2C address
+#define REV_POWER_PIN 6           // Reverse power ADC pin
+#define REV_POWER_CONVERSION_FACTOR 371.71F // ADC to power conversion
 ```
 
-### Hardware Parameters
-
-```cpp
-#define RF95_FREQ 915.0         // LoRa frequency
-#define MY_ADDRESS 212          // This remote unit's address
-#define CTRL_ADDRESS 211        // Controller unit address
-#define INA3221_I2C_ADDRESS 0x40 // Power monitor I2C
-#define REV_POWER_PIN A2        // Reverse power ADC
-#define REV_POWER_CONVERSION 0.5474F // ADC to power conversion
 
 ## Building and Uploading
 
-### With PlatformIO (Recommended)
+### With PlatformIO
 
 ```bash
+cd lora_field_unit
+
 # Build the project
-pio run -e adafruit_feather_m0
+pio run -e heltec_wifi_lora_32_V3
 
 # Upload to device
-pio run -t upload -e adafruit_feather_m0
+pio run -t upload -e heltec_wifi_lora_32_V3
 
 # Monitor serial output (115200 baud)
 pio device monitor -b 115200
@@ -197,10 +263,13 @@ pio device monitor -b 115200
 
 ### With Arduino IDE
 
-1. Install Adafruit board definitions
-2. Select "Adafruit Feather M0" as board
-3. Ensure all required libraries are installed
-4. Upload sketch
+1. Install ESP32 board definitions (via Boards Manager: "esp32")
+2. Install Heltec board support (https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series)
+3. Select "Heltec WiFi LoRa 32(V3)" as board
+4. Install required libraries:
+   - RadioLib (jgromes/RadioLib)
+   - Adafruit INA219
+5. Upload sketch
 
 ## Installation
 
@@ -236,25 +305,25 @@ pio device monitor -b 115200
 
 ### Telemetry Measurements
 
-**Voltage Monitoring (INA3221)**:
-- Channel 0: Main power bus
-- Channel 1: MCU supply rail
-- Shunt resistors: 0.10Ω per channel
+**Voltage Monitoring (INA219)**:
+- Bus voltage measurement
+- MCU supply rail monitoring
+- Shunt resistor: 0.10Ω
 
 **Current Measurement**:
 - Bus current range: ±3.2A (with 0.10Ω shunt)
-- Calibration: Via INA3221 library
+- Calibration: Via INA219 library
 
 **Reverse Power ADC**:
-- 12-bit resolution (0-1023 counts)
+- 12-bit resolution (0-1023 counts via analogReadMilliVolts())
 - Input range: 0-3.3V
-- Sampling: 10-sample average
-- Conversion factor: 0.5474 (RemoteQTH calibrated)
+- Sampling: 10-sample average with 3-top averaging
+- Conversion factor: 371.71 (calibrated for detector voltage)
 
 ## Error Handling
 
 - **Radio init failed**: Continuous LED blink, halts operation
-- **No INA3221**: Log error to serial, continue with zero telemetry
+- **No INA219**: Log error to serial, continue with zero telemetry
 - **Invalid command**: Log warning, return current position
 - **Send failed**: Log error, await next command
 
@@ -290,15 +359,14 @@ Both configurations accept the full 0-359° angle range for maximum compatibilit
 4. Monitor serial output for error messages
 
 ### Relays not switching
-1. Check relay module power supply (typically 5V, 1A+)
+1. Check relay module power supply (typically 12V, 1A+)
 2. Verify relay coil winding voltage matches supply
 3. Check GPIO pins are correctly wired to relay inputs
 4. Test relay operation with DC power supply directly
 
 ### Telemetry not updating
-1. Check INA3221 I2C connections
-2. Verify I2C pullup resistors (4.7kΩ typical)
-3. Check address 0x40 is correct for your INA3221
+1. Check INA219 I2C connections
+3. Check address 0x40 is correct for your INA219
 4. Monitor serial output for I2C init errors
 
 ### ADC reverse power readings are wrong
@@ -323,18 +391,20 @@ Contributions are welcome! Please follow these guidelines:
 
 ## References
 
-- [RadioHead Reliable Datagram](http://www.airspayce.com/mikem/arduino/RadioHead/)
+- [RadioLib Documentation](https://jgromes.github.io/RadioLib/)
 - [Yaesu DCU-1 Protocol](https://www.yaesu.com)
-- [Adafruit Feather M0 Documentation](https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-rfm95-module)
-- [RFM95 LoRa Module Datasheet](https://cdn-shop.adafruit.com/product-files/3173/RFM95_97_98_module+Schematic.pdf)
-- [INA3221 Power Monitor Datasheet](https://www.ti.com/lit/ds/symlink/ina3221.pdf)
+- [Heltec WiFi LoRa 32 V3 Documentation](https://docs.heltec.org/en/node/esp32/dev-board/lora/index.html)
+- [Heltec GitHub](https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series)
+- [SX1262 LoRa Module Datasheet](https://www.semtech.com/products/wireless-rf/lora-transceivers/sx1262)
+- [Adafruit INA219 Library](https://github.com/adafruit/Adafruit_INA219)
+- [INA219 Power Monitor Datasheet](https://www.ti.com/lit/ds/symlink/ina219.pdf)
 
 ## Authors
 
-- Your Name - Initial work
+- Rajiv Dewan, N2RD. rmdewan@gmail.com
 
 ## Acknowledgments
 
 - Adafruit Industries for excellent hardware and libraries
 - Mike McCauley for RadioHead library
-- Yaesu Corporation for DCU-1 protocol specification
+- Hygain for DCU-1 protocol specification
