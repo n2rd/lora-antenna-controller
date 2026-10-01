@@ -25,7 +25,7 @@ The LoRa Antenna Controller consists of two components working together:
 ## Key Features
 
 - **Wireless Communication**: 915 MHz LoRa (SX1262 radio)
-- **Protocol**: Yaesu DCU-1 compatible aperture rotator protocol
+- **Protocol**: Hygain DCU-1 compatible azimuth rotator protocol
 - **Antenna Configurations**: 8-direction (RemoteQTH) or 4-direction (Comtek) via compile-time selection
 - **Telemetry**: Comprehensive monitoring of voltage, current, RSSI, and reverse power
 - **Reliability**: RadioLib with automatic packet retry and acknowledgment
@@ -33,7 +33,7 @@ The LoRa Antenna Controller consists of two components working together:
 
 ## Hardware
 
-Both units use identical Heltec WiFi LoRa 32 V3 boards (ESP32-S3 with SX1262):
+Both units use Heltec WiFi LoRa 32 V4 boards (ESP32-S3 with SX1262).  The field-unit does not need a display.:
 - **Microcontroller**: ESP32-S3 (240 MHz dual-core)
 - **LoRa Radio**: SX1262 (915 MHz)
 - **Power**: USB-C (microcontroller) + external 12-13.8V supply (field unit)
